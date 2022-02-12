@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #EEEEEE;
+  font-family: 'Poppins', sans-serif; }
+
+.entry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "img form"; }
+  .entry .bgImg {
+    height: 92%;
+    grid-area: img;
+    background-color: red;
+    border-right: 2px solid #000; }
+    .entry .bgImg img {
+      width: 100%;
+      height: 100%; }
+  .entry .formIngreso {
+    grid-area: form; }
+    .entry .formIngreso form .borForm {
+      width: 75%;
+      height: 500px;
+      padding: 10%;
+      display: flex;
+      flex-direction: column;
+      background-color: #E5E5E5;
+      border: 1px solid #D5D5D4;
+      box-shadow: 5px 5px 1.5px #DFDFDE;
+      margin: 50px auto; }
+      .entry .formIngreso form .borForm h4 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 5px; }
+      .entry .formIngreso form .borForm p {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        text-align: center; }
+      .entry .formIngreso form .borForm input {
+        height: 40px;
+        padding: 15px;
+        margin-top: 40px;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 2px 2px 0.5px #D5D5D4; }
+      .entry .formIngreso form .borForm button {
+        height: 80px;
+        width: 50%;
+        margin: 45px auto;
+        border: 1px solid #D5D5D4;
+        background-color: #DFDFDE; }
+        .entry .formIngreso form .borForm button:hover {
+          cursor: pointer;
+          background-color: #ccc; }
+
+header .navBar {
+  height: 65px;
+  background-color: #DFDFDE;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo nav carrito"; }
+  header .navBar .logo {
+    width: 50%;
+    height: 90%;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #000;
+    grid-area: logo;
+    display: flex; }
+    header .navBar .logo img {
+      width: 20%;
+      height: 90%;
+      margin-top: 5px; }
+    header .navBar .logo h2 {
+      margin-top: 20px; }
+  header .navBar .nav {
+    grid-area: nav; }
+    header .navBar .nav ul {
+      list-style: none;
+      margin-left: 12%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: start; }
+      header .navBar .nav ul li {
+        margin: 25px 10px; }
+        header .navBar .nav ul li a {
+          text-decoration: none;
+          color: #000;
+          font-size: 1.1rem;
+          transition: 500ms; }
+          header .navBar .nav ul li a:hover {
+            text-decoration: underline;
+            cursor: pointer; }
+  header .navBar .carrito {
+    grid-area: carrito;
+    margin-right: 40px;
+    display: flex;
+    justify-content: end; }
+    header .navBar .carrito img {
+      width: 50px;
+      height: 50px;
+      margin-top: 8px; }

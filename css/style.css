@@ -108,14 +108,15 @@ header .navBar {
       margin-top: 8px; }
 
 .buscador {
-  width: 90%;
-  height: 20%;
+  width: 95%;
+  height: 35%;
   margin: 30px auto;
   padding: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   transition: 500ms; }
   .buscador div {
+    display: flex;
     padding: 10px;
     border-radius: 15px;
     border: 1.5px solid #E5E5E5;
@@ -123,6 +124,15 @@ header .navBar {
     transition: 500ms; }
     .buscador div :hover {
       transform: scale(1); }
+    .buscador div img {
+      width: 20px;
+      height: 20px; }
+    .buscador div h5 {
+      margin: 4px; }
+    .buscador div .tequila {
+      color: #000; }
+    .buscador div .bebidasB {
+      margin-top: -4px; }
   .buscador :hover {
     cursor: pointer;
     background-color: #ccc;
@@ -136,7 +146,7 @@ header .navBar {
   flex-direction: row;
   flex-wrap: wrap; }
   .productos .card {
-    width: 20%;
+    width: 250px;
     height: 380px;
     margin: 15px;
     padding: 20px 10px;

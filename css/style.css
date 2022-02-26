@@ -107,75 +107,107 @@ header .navBar {
       height: 50px;
       margin-top: 8px; }
 
-.buscador {
-  width: 95%;
-  height: 35%;
-  margin: 30px auto;
-  padding: 15px;
-  display: flex;
-  justify-content: space-around;
-  transition: 500ms; }
-  .buscador div {
+.acceso {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: .09fr 10fr;
+  grid-template-areas: "buscador carrito" "productos carrito"; }
+  .acceso .carritoExtend {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 5px;
+    background-color: #E5E5E5;
+    grid-area: carrito;
+    display: grid;
+    grid-template-rows: 9fr 0.09fr;
+    grid-template-areas: "visor" "boton"; }
+    .acceso .carritoExtend .visorProductos {
+      grid-area: visor;
+      background-color: #DFDFDE; }
+    .acceso .carritoExtend .compraFinalizada {
+      grid-area: boton; }
+      .acceso .carritoExtend .compraFinalizada button {
+        width: 50%;
+        height: 30%;
+        margin: 50px 85px;
+        border: 1px solid #DFDFDE;
+        background-color: #E9E9E9;
+        transition: 500ms; }
+      .acceso .carritoExtend .compraFinalizada :hover {
+        cursor: pointer;
+        background-color: #ccc; }
+  .acceso .buscador {
+    width: 95%;
+    height: 60%;
+    margin: 12px auto;
+    grid-area: buscador;
     display: flex;
-    padding: 10px;
-    border-radius: 15px;
-    border: 1.5px solid #E5E5E5;
-    background-color: #E9E9E9;
+    justify-content: space-around;
     transition: 500ms; }
-    .buscador div :hover {
-      transform: scale(1); }
-    .buscador div img {
-      width: 20px;
-      height: 20px; }
-    .buscador div h5 {
-      margin: 4px; }
-    .buscador div .tequila {
-      color: #000; }
-    .buscador div .bebidasB {
-      margin-top: -4px; }
-  .buscador :hover {
-    cursor: pointer;
-    background-color: #ccc;
-    transform: scale(1.2); }
-
-.productos {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap; }
-  .productos .card {
-    width: 250px;
-    height: 380px;
-    margin: 15px;
-    padding: 20px 10px;
-    border: 1px solid #E5E5E5;
-    background-color: #E9E9E9; }
-    .productos .card img {
-      width: 90%;
-      height: 60%;
-      margin-left: 11px; }
-    .productos .card h5 {
-      font-size: large;
-      color: #df1920;
-      margin: 10px; }
-    .productos .card h6 {
-      font-size: small;
-      color: #000;
-      margin: 0 5px;
-      font-family: 'Open Sans', sans-serif; }
-    .productos .card button {
-      width: 90%;
-      height: 35px;
-      margin-left: 11px;
-      margin-top: 10px;
-      background-color: #DFDFDE;
-      border: 1px solid #E5E5E5;
+    .acceso .buscador div {
+      display: flex;
+      padding: 10px;
+      border-radius: 15px;
+      border: 1.5px solid #E5E5E5;
+      background-color: #E9E9E9;
       transition: 500ms; }
-    .productos .card button:hover {
+      .acceso .buscador div :hover {
+        transform: scale(1); }
+      .acceso .buscador div img {
+        width: 20px;
+        height: 20px; }
+      .acceso .buscador div h5 {
+        margin: 4px; }
+      .acceso .buscador div .tequila {
+        color: #000; }
+      .acceso .buscador div .bebidasB {
+        margin-top: -4px; }
+    .acceso .buscador :hover {
       cursor: pointer;
-      background-color: #D5D5D4; }
+      background-color: #ccc;
+      transform: scale(1.2); }
+  .acceso .productos {
+    width: 90%;
+    margin: 0 auto;
+    grid-area: productos;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .acceso .productos .card {
+      width: 250px;
+      height: 380px;
+      margin: 15px;
+      padding: 20px 10px;
+      border: 1px solid #E5E5E5;
+      background-color: #E9E9E9; }
+      .acceso .productos .card img {
+        width: 90%;
+        height: 60%;
+        margin-left: 11px; }
+      .acceso .productos .card h5 {
+        font-size: large;
+        color: #df1920;
+        margin: 10px; }
+      .acceso .productos .card h6 {
+        font-size: small;
+        color: #000;
+        margin: 0 5px;
+        font-family: 'Open Sans', sans-serif; }
+      .acceso .productos .card button {
+        width: 90%;
+        height: 35px;
+        margin-left: 11px;
+        margin-top: 10px;
+        background-color: #DFDFDE;
+        border: 1px solid #E5E5E5;
+        transition: 500ms; }
+      .acceso .productos .card button:hover {
+        cursor: pointer;
+        background-color: #D5D5D4; }
 
 footer {
   width: 100%;

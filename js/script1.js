@@ -1,4 +1,4 @@
-// declarado de variables por tipo de bebida.
+// declaracion de productos
 
 function tipo (nombre) {
     this.nombre = nombre;
@@ -23,6 +23,7 @@ function producto (nombre, stock, precio, descuento) {
     this.stock = stock;
     this.precio = precio;
     this.descuento = descuento;
+    this.precioDeVenta = 0;
     this.productoElegido = function() {
         alert('Usted eligio ' + this.nombre + ', su precio es de $' + this.precio + ' pesos.');
     }
@@ -112,9 +113,9 @@ const productoEstanciaMendozaTintoCabernet = new producto ('Estancia Mendoza Cab
 const productoSuterCabernet = new producto ('Suter Cabernet', 1500, 200, .6);
 
 
-// operacion de los datos.
+// declaracion de los arrays y operaciones necesarias para el carrito de compras.
 
-const listaProductosNombres = [];
+const carrito = [];
 
 const productos = [tipoAperitivo, tipoBebidasBlanas, tipoBebidasSinAlcohol, tipoCerveza, tipoChampagne, tipoPack, tipoVinos];
 
@@ -148,7 +149,7 @@ let contadorPack = 0;
 
 let contadorVino = 0;
 
-let contadorLista = 0;
+let contadorCarrito = 0;
 
 let precioTotal = 0;
 
@@ -170,7 +171,7 @@ let menuPack = 'Que pack desea: '
 
 let menuVino = 'Que vino desea: '
 
-let listaProductos = 'Usted compro estos productos: '
+let carritoProductos = 'Usted compro estos productos: '
 
     
 for (const tipo of productos) {
@@ -238,6 +239,8 @@ function eleccionProducto(nombreP, nombreFTB, precioFTB, cantidadFTB, stockFTB, 
     }
 }
 
+// proceso
+
 do {
 
     menu(menuTipoProductos, tipoAperitivo.nombre, ' un ');
@@ -258,7 +261,8 @@ do {
                     if (productoAperitivoMarcela.stock >= cantidadComprada) {
                         precioParcial = productoAperitivoMarcela.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoAperitivoMarcela);
+                        productoAperitivoMarcela.precioDeVenta += precioParcial
+                        carrito.push(productoAperitivoMarcela);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoAperitivoMarcela.stock + ', vuelva a completar el formulario.')
                     }
@@ -271,7 +275,8 @@ do {
                     if (productoCampariBotella.stock >= cantidadComprada) {
                         precioParcial = productoCampariBotella.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoCampariBotella);
+                        productoCampariBotella.precioDeVenta += precioParcial
+                        carrito.push(productoCampariBotella);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoCampariBotella.stock + ', vuelva a completar el formulario.')
                     }
@@ -283,7 +288,8 @@ do {
                     if (productoCynarBotella.stock >= cantidadComprada) {
                         precioParcial = productoCynarBotella.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoCynarBotella);
+                        productoCynarBotella.precioDeVenta += precioParcial
+                        carrito.push(productoCynarBotella);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoCynarBotella.stock + ', vuelva a completar el formulario.')
                     }
@@ -295,7 +301,8 @@ do {
                     if (productoCynar70Proof.stock >= cantidadComprada) {
                         precioParcial = productoCynar70Proof.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoCynar70Proof);
+                        productoCynar70Proof.precioDeVenta += precioParcial
+                        carrito.push(productoCynar70Proof);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoCynar70Proof.stock + ', vuelva a completar el formulario.')
                     }
@@ -306,7 +313,8 @@ do {
                     if (productoDRLemonLataLimon.stock >= cantidadComprada) {
                         precioParcial = productoDRLemonLataLimon.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoDRLemonLataLimon);
+                        productoDRLemonLataLimon.precioDeVenta += precioParcial
+                        carrito.push(productoDRLemonLataLimon);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoDRLemonLataLimon.stock + ', vuelva a completar el formulario.')
                     }
@@ -331,7 +339,8 @@ do {
                     if (productoAbsolutApeach.stock >= cantidadComprada) {
                         precioParcial = productoAbsolutApeach.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoAbsolutApeach);
+                        productoAbsolutApeach.precioDeVenta += precioParcial
+                        carrito.push(productoAbsolutApeach);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoAbsolutApeach.stock + ', vuelva a completar el formulario.')
                     }
@@ -343,7 +352,8 @@ do {
                     if (productoBeefeaterGin.stock >= cantidadComprada) {
                         precioParcial = productoBeefeaterGin.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoBeefeaterGin);
+                        productoBeefeaterGin.precioDeVenta += precioParcial
+                        carrito.push(productoBeefeaterGin);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoBeefeaterGin.stock + ', vuelva a completar el formulario.')
                     }
@@ -355,7 +365,8 @@ do {
                     if (productoBombayGin.stock >= cantidadComprada) {
                         precioParcial = productoBombayGin.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoBombayGin);
+                        productoBombayGin.precioDeVenta += precioParcial
+                        carrito.push(productoBombayGin);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoBombayGin.stock + ', vuelva a completar el formulario.')
                     }
@@ -367,7 +378,8 @@ do {
                     if (productoConiacOtard.stock >= cantidadComprada) {
                         precioParcial = productoConiacOtard.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoConiacOtard);
+                        productoConiacOtard.precioDeVenta += precioParcial
+                        carrito.push(productoConiacOtard);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoConiacOtard.stock + ', vuelva a completar el formulario.')
                     }
@@ -379,7 +391,8 @@ do {
                     if (productoOrloffVodka.stock >= cantidadComprada) {
                         precioParcial = productoOrloffVodka.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoOrloffVodka);
+                        productoOrloffVodka.precioDeVenta += precioParcial
+                        carrito.push(productoOrloffVodka);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoOrloffVodka.stock + ', vuelva a completar el formulario.')
                     }
@@ -404,7 +417,8 @@ do {
                     if (productoCocaColaMediana.stock >= cantidadComprada) {
                         precioParcial = productoCocaColaMediana.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoCocaColaMediana);
+                        productoCocaColaMediana.precioDeVenta += precioParcial
+                        carrito.push(productoCocaColaMediana);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoCocaColaMediana.stock + ', vuelva a completar el formulario.')
                     }
@@ -417,7 +431,8 @@ do {
                     if (productoCocaColaChica.stock >= cantidadComprada) {
                         precioParcial = productoCocaColaChica.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoCocaColaChica);
+                        productoCocaColaChica.precioDeVenta += precioParcial
+                        carrito.push(productoCocaColaChica);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoCocaColaChica.stock + ', vuelva a completar el formulario.')
                     }
@@ -429,7 +444,8 @@ do {
                     if (productoFantaMediana.stock >= cantidadComprada) {
                         precioParcial = productoFantaMediana.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoFantaMediana);
+                        productoFantaMediana.precioDeVenta += precioParcial
+                        carrito.push(productoFantaMediana);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoFantaMediana.stock + ', vuelva a completar el formulario.')
                     }
@@ -441,7 +457,8 @@ do {
                     if (productoSheweppesTonicaGrande.stock >= cantidadComprada) {
                         precioParcial = productoSheweppesTonicaGrande.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoSheweppesTonicaGrande);
+                        productoSheweppesTonicaGrande.precioDeVenta += precioParcial
+                        carrito.push(productoSheweppesTonicaGrande);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoSheweppesTonicaGrande.stock + ', vuelva a completar el formulario.')
                     }
@@ -453,7 +470,8 @@ do {
                     if (productoSpriteMediana.stock >= cantidadComprada) {
                         precioParcial = productoSpriteMediana.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoSpriteMediana);
+                        productoSpriteMediana.precioDeVenta += precioParcial
+                        carrito.push(productoSpriteMediana);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoSpriteMediana.stock + ', vuelva a completar el formulario.')
                     }
@@ -478,7 +496,8 @@ do {
                     if (productoBrahamaRubiaLata.stock >= cantidadComprada) {
                         precioParcial = productoBrahamaRubiaLata.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoBrahamaRubiaLata);
+                        productoBrahamaRubiaLata.precioDeVenta += precioParcial
+                        carrito.push(productoBrahamaRubiaLata);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoBrahamaRubiaLata.stock + ', vuelva a completar el formulario.')
                     }
@@ -491,7 +510,8 @@ do {
                     if (productoCoronaRubiaBotella.stock >= cantidadComprada) {
                         precioParcial = productoCoronaRubiaBotella.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoCoronaRubiaBotella);
+                        productoCoronaRubiaBotella.precioDeVenta += precioParcial
+                        carrito.push(productoCoronaRubiaBotella);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoCoronaRubiaBotella.stock + ', vuelva a completar el formulario.')
                     }
@@ -503,7 +523,8 @@ do {
                     if (productoHeinekenRubiaBotella.stock >= cantidadComprada) {
                         precioParcial = productoHeinekenRubiaBotella.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoHeinekenRubiaBotella);
+                        productoHeinekenRubiaBotella.precioDeVenta += precioParcial
+                        carrito.push(productoHeinekenRubiaBotella);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoHeinekenRubiaBotella.stock + ', vuelva a completar el formulario.')
                     }
@@ -515,7 +536,8 @@ do {
                     if (productoImperialGoldenLata.stock >= cantidadComprada) {
                         precioParcial = productoImperialGoldenLata.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoImperialGoldenLata);
+                        productoImperialGoldenLata.precioDeVenta += precioParcial
+                        carrito.push(productoImperialGoldenLata);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoImperialGoldenLata.stock + ', vuelva a completar el formulario.')
                     }
@@ -527,7 +549,8 @@ do {
                     if (productoMillerRubiaLata.stock >= cantidadComprada) {
                         precioParcial = productoMillerRubiaLata.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoMillerRubiaLata);
+                        productoMillerRubiaLata.precioDeVenta += precioParcial
+                        carrito.push(productoMillerRubiaLata);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoMillerRubiaLata.stock + ', vuelva a completar el formulario.')
                     }
@@ -552,7 +575,8 @@ do {
                     if (productoBaronBRose.stock >= cantidadComprada) {
                         precioParcial = productoBaronBRose.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoBaronBRose);
+                        productoBaronBRose.precioDeVenta += precioParcial
+                        carrito.push(productoBaronBRose);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoBaronBRose.stock + ', vuelva a completar el formulario.')
                     }
@@ -565,7 +589,8 @@ do {
                     if (productoChandonRose.stock >= cantidadComprada) {
                         precioParcial = productoChandonRose.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoChandonRose);
+                        productoChandonRose.precioDeVenta += precioParcial
+                        carrito.push(productoChandonRose);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoChandonRose.stock + ', vuelva a completar el formulario.')
                     }
@@ -577,7 +602,8 @@ do {
                     if (productoDoloresBrut.stock >= cantidadComprada) {
                         precioParcial = productoDoloresBrut.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoDoloresBrut);
+                        productoDoloresBrut.precioDeVenta += precioParcial
+                        carrito.push(productoDoloresBrut);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoDoloresBrut.stock + ', vuelva a completar el formulario.')
                     }
@@ -589,7 +615,8 @@ do {
                     if (productoFedericoAlvearBrut.stock >= cantidadComprada) {
                         precioParcial = productoFedericoAlvearBrut.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoFedericoAlvearBrut);
+                        productoFedericoAlvearBrut.precioDeVenta += precioParcial
+                        carrito.push(productoFedericoAlvearBrut);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoFedericoAlvearBrut.stock + ', vuelva a completar el formulario.')
                     }
@@ -601,7 +628,8 @@ do {
                     if (productoMercierBrut.stock >= cantidadComprada) {
                         precioParcial = productoMercierBrut.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoMercierBrut);
+                        productoMercierBrut.precioDeVenta += precioParcial
+                        carrito.push(productoMercierBrut);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoMercierBrut.stock + ', vuelva a completar el formulario.')
                     }
@@ -626,7 +654,8 @@ do {
                     if (productoPack1.stock >= cantidadComprada) {
                         precioParcial = productoPack1.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoPack1);
+                        productoPack1.precioDeVenta += precioParcial
+                        carrito.push(productoPack1);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoPack1.stock + ', vuelva a completar el formulario.')
                     }
@@ -639,7 +668,8 @@ do {
                     if (productoPack2.stock >= cantidadComprada) {
                         precioParcial = productoPack2.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoPack2);
+                        productoPack2.precioDeVenta += precioParcial
+                        carrito.push(productoPack2);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoPack2.stock + ', vuelva a completar el formulario.')
                     }
@@ -651,7 +681,8 @@ do {
                     if (productoPack3.stock >= cantidadComprada) {
                         precioParcial = productoPack3.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoPack3);
+                        productoPack3.precioDeVenta += precioParcial
+                        carrito.push(productoPack3);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoPack3.stock + ', vuelva a completar el formulario.')
                     }
@@ -663,7 +694,8 @@ do {
                     if (productoPack4.stock >= cantidadComprada) {
                         precioParcial = productoPack4.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoPack4);
+                        productoPack4.precioDeVenta += precioParcial
+                        carrito.push(productoPack4);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoPack4.stock + ', vuelva a completar el formulario.')
                     }
@@ -675,7 +707,8 @@ do {
                     if (productoPack5.stock >= cantidadComprada) {
                         precioParcial = productoPack5.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoPack5);
+                        productoPack5.precioDeVenta += precioParcial
+                        carrito.push(productoPack5);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoPack5.stock + ', vuelva a completar el formulario.')
                     }
@@ -700,7 +733,8 @@ do {
                     if (productoAlarisBlanco.stock >= cantidadComprada) {
                         precioParcial = productoAlarisBlanco.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoAlarisBlanco);
+                        productoAlarisBlanco.precioDeVenta += precioParcial
+                        carrito.push(productoAlarisBlanco);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoAlarisBlanco.stock + ', vuelva a completar el formulario.')
                     }
@@ -713,7 +747,8 @@ do {
                     if (productoCancillerBlanco.stock >= cantidadComprada) {
                         precioParcial = productoCancillerBlanco.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoCancillerBlanco);
+                        productoCancillerBlanco.precioDeVenta += precioParcial
+                        carrito.push(productoCancillerBlanco);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoCancillerBlanco.stock + ', vuelva a completar el formulario.')
                     }
@@ -725,7 +760,8 @@ do {
                     if (productoColonMalbec.stock >= cantidadComprada) {
                         precioParcial = productoColonMalbec.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoColonMalbec);
+                        productoColonMalbec.precioDeVenta += precioParcial
+                        carrito.push(productoColonMalbec);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoColonMalbec.stock + ', vuelva a completar el formulario.')
                     }
@@ -737,7 +773,8 @@ do {
                     if (productoEstanciaMendozaTintoCabernet.stock >= cantidadComprada) {
                         precioParcial = productoEstanciaMendozaTintoCabernet.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoEstanciaMendozaTintoCabernet);
+                        productoEstanciaMendozaTintoCabernet.precioDeVenta += precioParcial
+                        carrito.push(productoEstanciaMendozaTintoCabernet);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoEstanciaMendozaTintoCabernet.stock + ', vuelva a completar el formulario.')
                     }
@@ -749,7 +786,8 @@ do {
                     if (productoSuterCabernet.stock >= cantidadComprada) {
                         precioParcial = productoSuterCabernet.precio * cantidadComprada
                         precioTotal += precioParcial
-                        listaProductosNombres.push(productoSuterCabernet);
+                        productoSuterCabernet.precioDeVenta += precioParcial
+                        carrito.push(productoSuterCabernet);
                     } else {
                         alert('no tenemos suficiente stock, si desea comprar menos de ' + productoSuterCabernet.stock + ', vuelva a completar el formulario.')
                     }
@@ -766,16 +804,17 @@ do {
     }
 
     // alert('El precio parcial de su compra es de $' + precioTotal + ' pesos.');
+    
 
     continuar = prompt('Si desea continuar con la compra escriba "si", si desea terminar la compra escriba "no".')
 
 } while (continuar != 'no');
 
-for (const producto of listaProductosNombres) {
-    contadorLista++
-    listaProductos += '\n' + contadorLista + '- ' + producto.nombre
+for (const producto of carrito) {
+    contadorCarrito++
+    carritoProductos += '\n' + contadorCarrito + '- ' + producto.nombre + '          $' + producto.precioDeVenta
 }
-alert(listaProductos + '\nSu compra total es de $' + precioTotal + ' pesos \nsu producto se despachara en las proximas 24hs. Muchas gracias por su compra.');
+alert(carritoProductos + '\nSu compra total es de $' + precioTotal + ' pesos \nsu producto se despachara en las proximas 24hs. Muchas gracias por su compra.');
 
 
 

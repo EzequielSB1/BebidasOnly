@@ -47,10 +47,12 @@ body {
         border-radius: 50px;
         border: none;
         box-shadow: 2px 2px 0.5px #D5D5D4; }
+      .entry .formIngreso form .borForm .ingresar {
+        margin-top: 20px; }
       .entry .formIngreso form .borForm button {
-        height: 80px;
+        height: 50px;
         width: 50%;
-        margin: 45px auto;
+        margin: 10px auto;
         border: 1px solid #D5D5D4;
         background-color: #DFDFDE; }
         .entry .formIngreso form .borForm button:hover {
@@ -272,26 +274,28 @@ footer {
 
 .nosotros {
   width: 95%;
-  height: 350px;
+  height: 95%;
   margin: 50px auto;
   padding: 0 50px 50px 50px;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #DFDFDE;
   background-color: #E9E9E9; }
   .nosotros h2 {
     text-align: center;
     margin: 15px 0 5px 0;
     color: #000;
     font-size: xx-large; }
-  .nosotros p {
-    text-align: center;
-    color: #000;
-    padding: 10px 0;
-    font-size: 1.1rem;
-    letter-spacing: 1px; }
+  .nosotros .textContent {
+    background-color: #DFDFDE;
+    padding: 10px 0; }
+    .nosotros .textContent p {
+      text-align: center;
+      color: #000;
+      font-size: 1.1rem;
+      letter-spacing: 1px; }
 
 .contacto .contenedor {
   width: 95%;
-  height: 362px;
+  height: 90%;
   margin: 30px auto 60px auto;
   border: 1px solid #E5E5E5;
   background-color: #E9E9E9; }
@@ -344,6 +348,39 @@ footer {
         .contacto .contenedor form .formulario .enviar button:hover {
           cursor: pointer;
           background-color: #D5D5D4; }
+
+@media only screen and (max-width: 850px) {
+  .contacto .contenedor {
+    height: 50%; }
+    .contacto .contenedor form {
+      grid-template-columns: 2fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "mensaje" "formulario"; }
+      .contacto .contenedor form .formulario {
+        grid-area: formulario;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px auto 0;
+        width: 100%; }
+        .contacto .contenedor form .formulario .formularioLlenar {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+        .contacto .contenedor form .formulario .enviar {
+          width: 100%;
+          margin-top: 5%;
+          display: flex; }
+          .contacto .contenedor form .formulario .enviar button {
+            width: 80%;
+            height: 50px;
+            border: 1px solid #E5E5E5;
+            background-color: #DFDFDE;
+            transition: 500ms; }
+  .entry {
+    grid-template-areas: "form form"; }
+    .entry .bgImg {
+      display: none; } }
 
 @media only screen and (max-width: 550px) {
   header {

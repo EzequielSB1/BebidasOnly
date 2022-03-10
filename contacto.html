@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- Link fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- logo -->
+    <link rel="icon" href="./assets/img/cerveza.svg">
     <!-- titulo -->
     <title>Bebidas Only | Contacto</title>
 </head>
@@ -18,15 +20,35 @@
                 <img src="assets/img/cerveza.svg" alt="logo de un vaso y una botella">
                 <h2>Bebidas Only</h2>
             </a>
-            <nav class="nav">
-                <ul>
-                    <li><a href="./index.html">Inicio</a></li>
-                    <li><a href="./nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-            <div class="carrito">
+            <div class="menu menuVer">
+                <button class="botonMenu"><img src="./assets/img/menu.svg" alt="menu-hamburguesa"></button>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./nosotros.html">Sobre nosotros</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="botonCarrito">
                 <img src="./assets/img/carrito.svg" alt="carrito">
+                <div class="carrito1">
+                    <div class="visorProductos">
+                        <div class="productoVista">
+                            <img src="./assets/img/productos/Aperitivos/AperitivoMarcela.jpg" alt="imagenDeProducto" id="imagenProducto">
+                            <h6 id="nombreProducto">Aperitivo Marcela</h6>
+                            <div id="contadorCantProductos">
+                                <button id="signoMenos"><img src="./assets/img/menos.svg" alt="signoMenos"></button>
+                                <p id="contadorProductos">0</p>
+                                <button id="signoMas"><img src="./assets/img/mas.svg" alt="signoMas"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compraFinalizada">
+                        <button>Comprar</button>
+                        <button>Limpiar carrito</button>
+                    </div>
+                </div>
             </div>
         </div>
     </header>

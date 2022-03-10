@@ -58,51 +58,127 @@ body {
           background-color: #ccc; }
 
 header .navBar {
+  width: 100%;
   height: 65px;
   background-color: #DFDFDE;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "logo nav carrito"; }
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
   header .navBar .logo {
-    width: 50%;
-    height: 90%;
-    margin-left: 10px;
+    margin: 20px 15px;
     text-decoration: none;
     color: #000;
     grid-area: logo;
+    align-items: flex-start;
     display: flex; }
     header .navBar .logo img {
-      width: 20%;
-      height: 90%;
-      margin-top: 5px; }
+      align-items: flex-start;
+      width: 25px; }
     header .navBar .logo h2 {
-      margin-top: 20px; }
-  header .navBar .nav {
-    grid-area: nav; }
-    header .navBar .nav ul {
+      font-size: x-large;
+      align-items: flex-start; }
+  header .navBar .menu button {
+    display: none; }
+    header .navBar .menu button img {
+      width: 25px;
+      height: 25px;
+      background-color: #DFDFDE; }
+    header .navBar .menu button img:hover {
+      cursor: pointer;
+      background-color: #D5D5D4; }
+  header .navBar .menu .nav {
+    grid-area: nav;
+    align-items: center;
+    display: flex; }
+    header .navBar .menu .nav ul {
       list-style: none;
-      margin-left: 18%;
       display: flex;
-      flex-wrap: wrap;
       flex-direction: row;
-      justify-content: start; }
-      header .navBar .nav ul li {
+      align-items: center; }
+      header .navBar .menu .nav ul li {
         margin: 25px 10px; }
-        header .navBar .nav ul li a {
+        header .navBar .menu .nav ul li a {
           text-decoration: none;
           color: #000;
           font-size: 1.1rem;
           transition: 500ms; }
-          header .navBar .nav ul li a:hover {
+          header .navBar .menu .nav ul li a:hover {
             text-decoration: underline;
             cursor: pointer; }
-  header .navBar .carrito {
+  header .navBar .botonCarrito {
     grid-area: carrito;
-    margin-right: 40px;
+    margin: 0 25px 10px;
+    align-items: flex-end;
     display: flex;
     justify-content: end; }
-    header .navBar .carrito img {
+    header .navBar .botonCarrito:hover {
+      cursor: pointer; }
+    header .navBar .botonCarrito .carrito1 {
+      width: 350px;
+      height: 500px;
+      margin-bottom: -510px;
+      margin-right: 0;
+      background-color: #302b2b;
+      padding: 5px;
+      position: absolute;
+      display: none;
+      grid-template-rows: 8fr 0.03fr;
+      grid-template-areas: "visor" "boton"; }
+      header .navBar .botonCarrito .carrito1 .visorProductos {
+        width: 90%;
+        height: 80%;
+        margin: 20px auto -15px;
+        grid-area: visor;
+        background-color: #D5D5D4;
+        display: flex;
+        justify-content: center; }
+        header .navBar .botonCarrito .carrito1 .visorProductos div {
+          width: 90%;
+          display: flex;
+          justify-content: space-around; }
+          header .navBar .botonCarrito .carrito1 .visorProductos div img {
+            width: 50px;
+            height: 50px; }
+          header .navBar .botonCarrito .carrito1 .visorProductos div h6 {
+            font-size: small;
+            margin-top: 15px;
+            margin-left: 30px;
+            width: 60px; }
+          header .navBar .botonCarrito .carrito1 .visorProductos div div {
+            margin-top: 10px; }
+            header .navBar .botonCarrito .carrito1 .visorProductos div div #signoMenos {
+              margin-left: 40px; }
+            header .navBar .botonCarrito .carrito1 .visorProductos div div button {
+              width: 30px;
+              height: 30px;
+              margin-top: 7px; }
+              header .navBar .botonCarrito .carrito1 .visorProductos div div button img {
+                margin: auto;
+                width: 25px;
+                height: 25px; }
+            header .navBar .botonCarrito .carrito1 .visorProductos div div p {
+              font-size: medium;
+              margin: 10px 20px 0; }
+      header .navBar .botonCarrito .carrito1 .compraFinalizada {
+        grid-area: boton;
+        margin-top: -35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        header .navBar .botonCarrito .carrito1 .compraFinalizada button {
+          width: 50%;
+          height: 30px;
+          margin-bottom: 15px;
+          border: 1px solid #000;
+          border-radius: 30px;
+          background-color: #E9E9E9;
+          transition: 500ms; }
+        header .navBar .botonCarrito .carrito1 .compraFinalizada :hover {
+          cursor: pointer;
+          background-color: #ccc; }
+    header .navBar .botonCarrito .visor {
+      display: grid; }
+    header .navBar .botonCarrito img {
       width: 50px;
       height: 50px;
       margin-top: 8px; }
@@ -111,65 +187,42 @@ header .navBar {
   width: 100%;
   height: 80%;
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: .09fr 10fr;
-  grid-template-areas: "buscador carrito" "productos carrito"; }
-  .acceso .carritoExtend {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 5px;
-    background-color: #E5E5E5;
-    grid-area: carrito;
-    display: grid;
-    grid-template-rows: 9fr 0.09fr;
-    grid-template-areas: "visor" "boton"; }
-    .acceso .carritoExtend .visorProductos {
-      grid-area: visor;
-      background-color: #DFDFDE; }
-    .acceso .carritoExtend .compraFinalizada {
-      grid-area: boton; }
-      .acceso .carritoExtend .compraFinalizada button {
-        width: 50%;
-        height: 30%;
-        margin: 50px 85px;
-        border: 1px solid #DFDFDE;
-        background-color: #E9E9E9;
-        transition: 500ms; }
-      .acceso .carritoExtend .compraFinalizada :hover {
-        cursor: pointer;
-        background-color: #ccc; }
+  grid-template-rows: .02fr 10fr;
+  grid-template-areas: "buscador" "productos"; }
   .acceso .buscador {
     width: 95%;
-    height: 60%;
-    margin: 12px auto;
+    height: 15%;
     grid-area: buscador;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
     transition: 500ms; }
-    .acceso .buscador div {
+    .acceso .buscador button {
+      margin: 10px auto;
       display: flex;
       padding: 10px;
       border-radius: 15px;
       border: 1.5px solid #E5E5E5;
       background-color: #E9E9E9;
       transition: 500ms; }
-      .acceso .buscador div :hover {
+      .acceso .buscador button :hover {
         transform: scale(1); }
-      .acceso .buscador div img {
+      .acceso .buscador button img {
         width: 20px;
         height: 20px; }
-      .acceso .buscador div h5 {
-        margin: 4px; }
-      .acceso .buscador div .tequila {
+      .acceso .buscador button h5 {
+        margin: 4px;
+        font-size: small; }
+      .acceso .buscador button .tequila {
         color: #000; }
-      .acceso .buscador div .bebidasB {
+      .acceso .buscador button .bebidasB {
         margin-top: -4px; }
     .acceso .buscador :hover {
       cursor: pointer;
       background-color: #ccc;
       transform: scale(1.2); }
-  .acceso .productos {
+  .acceso .visorCompra {
     width: 90%;
     margin: 0 auto;
     grid-area: productos;
@@ -177,27 +230,27 @@ header .navBar {
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap; }
-    .acceso .productos .card {
+    .acceso .visorCompra div {
       width: 250px;
       height: 380px;
       margin: 15px;
       padding: 20px 10px;
       border: 1px solid #E5E5E5;
       background-color: #E9E9E9; }
-      .acceso .productos .card img {
+      .acceso .visorCompra div img {
         width: 90%;
         height: 60%;
         margin-left: 11px; }
-      .acceso .productos .card h5 {
+      .acceso .visorCompra div h5 {
         font-size: large;
         color: #df1920;
         margin: 10px; }
-      .acceso .productos .card h6 {
+      .acceso .visorCompra div h6 {
         font-size: small;
         color: #000;
         margin: 0 5px;
         font-family: 'Open Sans', sans-serif; }
-      .acceso .productos .card button {
+      .acceso .visorCompra div button {
         width: 90%;
         height: 35px;
         margin-left: 11px;
@@ -205,7 +258,7 @@ header .navBar {
         background-color: #DFDFDE;
         border: 1px solid #E5E5E5;
         transition: 500ms; }
-      .acceso .productos .card button:hover {
+      .acceso .visorCompra div button:hover {
         cursor: pointer;
         background-color: #D5D5D4; }
 
@@ -291,3 +344,49 @@ footer {
         .contacto .contenedor form .formulario .enviar button:hover {
           cursor: pointer;
           background-color: #D5D5D4; }
+
+@media only screen and (max-width: 550px) {
+  header {
+    margin: 0 auto; }
+    header .navBar {
+      height: 130px;
+      display: grid;
+      grid-template-columns: 1.5fr .5fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "logo logo" "menu carrito"; }
+      header .navBar .logo {
+        margin: auto; }
+      header .navBar .menu {
+        grid-area: menu;
+        width: 35px;
+        height: 35px;
+        border: none;
+        background-color: #DFDFDE;
+        margin: 20px auto 0; }
+        header .navBar .menu button {
+          display: flex;
+          border: none; }
+          header .navBar .menu button img {
+            color: #DFDFDE; }
+        header .navBar .menu button:hover {
+          cursor: pointer; }
+        header .navBar .menu .nav {
+          display: none;
+          background-color: #DFDFDE;
+          margin: 135px auto 0 -50px;
+          height: 30%; }
+          header .navBar .menu .nav ul {
+            flex-direction: column;
+            position: absolute;
+            background-color: #DFDFDE; }
+            header .navBar .menu .nav ul li {
+              margin: 20px;
+              align-content: center; }
+              header .navBar .menu .nav ul li a {
+                font-size: 2rem; }
+        header .navBar .menu .menuVer {
+          display: flex; }
+      header .navBar .botonCarrito {
+        margin: 0 80px 10px 0; }
+        header .navBar .botonCarrito .carrito1 {
+          margin-right: -30px; } }

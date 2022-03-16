@@ -13,7 +13,6 @@ body {
   grid-template-rows: 1fr;
   grid-template-areas: "img form"; }
   .entry .bgImg {
-    height: 92%;
     grid-area: img;
     background-color: red;
     border-right: 2px solid #000; }
@@ -21,43 +20,47 @@ body {
       width: 100%;
       height: 100%; }
   .entry .formIngreso {
-    grid-area: form; }
-    .entry .formIngreso form .borForm {
-      width: 75%;
-      height: 500px;
-      padding: 10%;
-      display: flex;
-      flex-direction: column;
-      background-color: #E5E5E5;
+    grid-area: form;
+    display: block; }
+  .entry .formCrear {
+    grid-area: form;
+    display: none; }
+  .entry .formVer {
+    display: block; }
+  .entry .formularios form .borForm, .entry .formularios form .crearForm {
+    width: 75%;
+    height: 500px;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E5E5;
+    border: 1px solid #D5D5D4;
+    box-shadow: 5px 5px 1.5px #DFDFDE;
+    margin: 50px auto; }
+    .entry .formularios form .borForm h4, .entry .formularios form .crearForm h4 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 5px; }
+    .entry .formularios form .borForm p, .entry .formularios form .crearForm p {
+      font-size: 1rem;
+      letter-spacing: 1px;
+      text-align: center; }
+    .entry .formularios form .borForm input, .entry .formularios form .borForm button, .entry .formularios form .crearForm input, .entry .formularios form .crearForm button {
+      height: 40px;
+      padding: 15px;
+      margin-top: 40px;
+      border-radius: 50px;
+      border: none;
+      box-shadow: 2px 2px 0.5px #D5D5D4; }
+    .entry .formularios form .borForm .crear, .entry .formularios form .crearForm .crear {
+      height: 50px;
+      width: 50%;
+      margin: 10px auto;
       border: 1px solid #D5D5D4;
-      box-shadow: 5px 5px 1.5px #DFDFDE;
-      margin: 50px auto; }
-      .entry .formIngreso form .borForm h4 {
-        font-size: 2.5rem;
-        text-align: center;
-        margin-bottom: 5px; }
-      .entry .formIngreso form .borForm p {
-        font-size: 1rem;
-        letter-spacing: 1px;
-        text-align: center; }
-      .entry .formIngreso form .borForm input {
-        height: 40px;
-        padding: 15px;
-        margin-top: 40px;
-        border-radius: 50px;
-        border: none;
-        box-shadow: 2px 2px 0.5px #D5D5D4; }
-      .entry .formIngreso form .borForm .ingresar {
-        margin-top: 20px; }
-      .entry .formIngreso form .borForm button {
-        height: 50px;
-        width: 50%;
-        margin: 10px auto;
-        border: 1px solid #D5D5D4;
-        background-color: #DFDFDE; }
-        .entry .formIngreso form .borForm button:hover {
-          cursor: pointer;
-          background-color: #ccc; }
+      background-color: #DFDFDE; }
+      .entry .formularios form .borForm .crear:hover, .entry .formularios form .crearForm .crear:hover {
+        cursor: pointer;
+        background-color: #ccc; }
 
 header .navBar {
   width: 100%;
@@ -130,43 +133,59 @@ header .navBar {
         width: 90%;
         height: 80%;
         margin: 20px auto -15px;
+        overflow-y: scroll;
         grid-area: visor;
         background-color: #D5D5D4;
         display: flex;
-        justify-content: center; }
-        header .navBar .botonCarrito .carrito1 .visorProductos div {
+        flex-direction: column; }
+        header .navBar .botonCarrito .carrito1 .visorProductos li {
           width: 90%;
-          display: flex;
-          justify-content: space-around; }
-          header .navBar .botonCarrito .carrito1 .visorProductos div img {
+          margin-top: 10px;
+          margin-left: 15px;
+          display: grid;
+          grid-template-columns: 1fr 3fr 1fr;
+          grid-template-rows: 1fr;
+          grid-template-areas: "img title cant"; }
+          header .navBar .botonCarrito .carrito1 .visorProductos li img {
             width: 50px;
-            height: 50px; }
-          header .navBar .botonCarrito .carrito1 .visorProductos div h6 {
-            font-size: small;
-            margin-top: 15px;
-            margin-left: 30px;
-            width: 60px; }
-          header .navBar .botonCarrito .carrito1 .visorProductos div div {
-            margin-top: 10px; }
-            header .navBar .botonCarrito .carrito1 .visorProductos div div #signoMenos {
-              margin-left: 40px; }
-            header .navBar .botonCarrito .carrito1 .visorProductos div div button {
-              width: 30px;
-              height: 30px;
-              margin-top: 7px; }
-              header .navBar .botonCarrito .carrito1 .visorProductos div div button img {
-                margin: auto;
-                width: 25px;
-                height: 25px; }
-            header .navBar .botonCarrito .carrito1 .visorProductos div div p {
-              font-size: medium;
-              margin: 10px 20px 0; }
+            height: 50px;
+            grid-area: img;
+            margin: auto;
+            margin-right: 15px; }
+          header .navBar .botonCarrito .carrito1 .visorProductos li h6 {
+            grid-area: title;
+            font-size: .8rem;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center; }
+          header .navBar .botonCarrito .carrito1 .visorProductos li button {
+            width: 30px;
+            height: 30px;
+            margin-top: 7px;
+            margin-left: 15px;
+            border: 0;
+            background-color: #000;
+            color: #fff;
+            grid-area: cant; }
       header .navBar .botonCarrito .carrito1 .compraFinalizada {
         grid-area: boton;
         margin-top: -35px;
         display: flex;
         flex-direction: column;
         align-items: center; }
+        header .navBar .botonCarrito .carrito1 .compraFinalizada div {
+          width: 90%;
+          height: 20%;
+          padding: 2px;
+          margin-top: -10px;
+          margin-bottom: 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; }
+          header .navBar .botonCarrito .carrito1 .compraFinalizada div h5 {
+            font-size: medium;
+            margin: auto 20px;
+            color: #ccc; }
         header .navBar .botonCarrito .carrito1 .compraFinalizada button {
           width: 50%;
           height: 30px;
@@ -195,8 +214,9 @@ header .navBar {
     width: 95%;
     height: 15%;
     grid-area: buscador;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     transition: 500ms; }

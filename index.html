@@ -11,93 +11,39 @@
     <!-- logo -->
     <link rel="icon" href="./assets/img/cerveza.svg">
     <!-- titulo -->
-    <title>Bebidas Only | Inicio</title>
+    <title>Bebidas Only | Ingreso</title>
 </head>
 <body>
-    <header>
-        <div class="navBar">
-            <a href="./index.html" class="logo">
-                <img src="assets/img/cerveza.svg" alt="logo de un vaso y una botella">
-                <h2>Bebidas Only</h2>
-            </a>
-            <div class="menu menuVer">
-                <button class="botonMenu"><img src="./assets/img/menu.svg" alt="menu-hamburguesa"></button>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="./index.html">Inicio</a></li>
-                        <li><a href="./nosotros.html">Sobre nosotros</a></li>
-                        <li><a href="./contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="botonCarrito">
-                <img src="./assets/img/carrito.svg" alt="carrito">
-                <div class="carrito1">
-                    <div class="visorProductos">
-                        <div class="productoVista">
-                            <img src="./assets/img/productos/Aperitivos/AperitivoMarcela.jpg" alt="imagenDeProducto" id="imagenProducto">
-                            <h6 id="nombreProducto">Aperitivo Marcela</h6>
-                            <div id="contadorCantProductos">
-                                <button id="signoMenos"><img src="./assets/img/menos.svg" alt="signoMenos"></button>
-                                <p id="contadorProductos">0</p>
-                                <button id="signoMas"><img src="./assets/img/mas.svg" alt="signoMas"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="compraFinalizada">
-                        <button>Comprar</button>
-                        <button>Limpiar carrito</button>
-                    </div>
-                </div>
-            </div>
+    <main class="entry">
+        <div class="bgImg">
+            <img src="./assets/img/bgBebidas.jpg" alt="Imagen de bebidas">
         </div>
-    </header>
-    <main class="acceso">
-        
-        <section class="buscador">
-            <button class="botonFiltroA">
-                <img src="./assets/img/campari.svg" alt="Aperitivos">
-                <h5>Aperitivos</h5>
-            </button>
-            <button class="botonFiltroBB">
-                <img src="./assets/img/tequila.svg" alt="Bebidas Blancas">
-                <h5>Bebidas Blancas</h5>
-            </button>
-            <button class="botonFiltroV">
-                <img src="./assets/img/vino.svg" alt="Vinos">
-                <h5>Vinos</h5>
-            </button>
-            <button class="botonFiltroC">
-                <img src="./assets/img/cerveza.svg" alt="Ceverzas">
-                <h5>Cervezas</h5>
-            </button>
-            <button class="botonFiltroBA">
-                <img src="./assets/img/coca.svg" alt="Bebidas s/ Alcohol">
-                <h5>Bebidas Sin Alcohol</h5>
-            </button>
-            <button class="botonFiltroCh">
-                <img src="./assets/img/champagne.svg" alt="Champagne">
-                <h5>Champagne</h5>
-            </button>
-            <button class="botonFiltroPack">
-                <img src="./assets/img/bolsa.svg" alt="Combos">
-                <h5>Combos</h5>
-            </button>
-            <button class="botonFiltroTodo">
-                <img src="./assets/img/menu.svg" alt="logo">
-                <h5>Todo</h5>
-            </button>
-        </section>
-        <section class="visorCompra">
-        </section>
+        <div class="formularios formIngreso">
+            <form action="./inicio.html" id="formulario">
+                <div class="borForm">
+                    <h4>Bienvenido</h4>
+                    <p>Ingrese sus datos para empezar a disfrutar nuestro excelente servicio.</p>
+                    <input type="text" name="usuario" id="usuario" placeholder="Ingrese su usuario">
+                    <input type="password" name="password" id="password"  placeholder="Ingrese su contraseña">
+                    <input type="submit" value="Entrar" class="ingresar crear">
+                    <input type="button" value="Crear una cuenta" class="cambio crear">
+                </div>
+            </form>
+        </div>
+        <div class="formularios formCrear">
+            <form action="" id="formularioCrear">
+                <div class="crearForm">
+                    <h4>Bienvenido</h4>
+                    <p>Ingrese sus datos para empezar a disfrutar nuestro excelente servicio.</p>
+                    <input type="email" name="email" id="email" placeholder="Ingrese un email">
+                    <input type="text" name="usuario" id="usuario" placeholder="Ingrese su usuario">
+                    <input type="password" name="password" id="password"  placeholder="Ingrese su contraseña">
+                    <input type="submit" value="Crear cuenta" class="ingresar crear">
+                </div>
+            </form>
+        </div>
     </main>
-    <footer>
-        <h3>        
-            @todoslosderechosreservadosparaBebidasOnly
-        </h3>
-    </footer>
-
-    <!-- JS -->
-    <script src="./js/script1.js"></script>
+    <!-- Links JS -->
+    <script src="./js/script2.js"></script>
 </body>
 </html>

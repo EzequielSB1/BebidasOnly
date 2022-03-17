@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+  * h1, * h2, * h3, * h4, * h5, * h6, * p:hover {
+    cursor: default; }
 
 body {
   background-color: #EEEEEE;
@@ -118,91 +120,97 @@ header .navBar {
     justify-content: end; }
     header .navBar .botonCarrito:hover {
       cursor: pointer; }
-    header .navBar .botonCarrito .carrito1 {
-      width: 350px;
-      height: 500px;
-      margin-bottom: -510px;
-      margin-right: 0;
-      background-color: #302b2b;
-      padding: 5px;
-      position: absolute;
-      display: none;
-      grid-template-rows: 8fr 0.03fr;
-      grid-template-areas: "visor" "boton"; }
-      header .navBar .botonCarrito .carrito1 .visorProductos {
-        width: 90%;
-        height: 80%;
-        margin: 20px auto -15px;
-        overflow-y: scroll;
-        grid-area: visor;
-        background-color: #D5D5D4;
-        display: flex;
-        flex-direction: column; }
-        header .navBar .botonCarrito .carrito1 .visorProductos li {
-          width: 90%;
-          margin-top: 10px;
-          margin-left: 15px;
-          display: grid;
-          grid-template-columns: 1fr 3fr 1fr;
-          grid-template-rows: 1fr;
-          grid-template-areas: "img title cant"; }
-          header .navBar .botonCarrito .carrito1 .visorProductos li img {
-            width: 50px;
-            height: 50px;
-            grid-area: img;
-            margin: auto;
-            margin-right: 15px; }
-          header .navBar .botonCarrito .carrito1 .visorProductos li h6 {
-            grid-area: title;
-            font-size: .8rem;
-            margin-top: auto;
-            margin-bottom: auto;
-            text-align: center; }
-          header .navBar .botonCarrito .carrito1 .visorProductos li button {
-            width: 30px;
-            height: 30px;
-            margin-top: 7px;
-            margin-left: 15px;
-            border: 0;
-            background-color: #000;
-            color: #fff;
-            grid-area: cant; }
-      header .navBar .botonCarrito .carrito1 .compraFinalizada {
-        grid-area: boton;
-        margin-top: -35px;
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        header .navBar .botonCarrito .carrito1 .compraFinalizada div {
-          width: 90%;
-          height: 20%;
-          padding: 2px;
-          margin-top: -10px;
-          margin-bottom: 10px;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between; }
-          header .navBar .botonCarrito .carrito1 .compraFinalizada div h5 {
-            font-size: medium;
-            margin: auto 20px;
-            color: #ccc; }
-        header .navBar .botonCarrito .carrito1 .compraFinalizada button {
-          width: 50%;
-          height: 30px;
-          margin-bottom: 15px;
-          border: 1px solid #000;
-          border-radius: 30px;
-          background-color: #E9E9E9;
-          transition: 500ms; }
-        header .navBar .botonCarrito .carrito1 .compraFinalizada :hover {
-          cursor: pointer;
-          background-color: #ccc; }
-    header .navBar .botonCarrito .visor {
-      display: grid; }
     header .navBar .botonCarrito img {
       width: 50px;
       height: 50px;
       margin-top: 8px; }
+  header .navBar .carrito1 {
+    width: 350px;
+    height: 500px;
+    margin-top: 65px;
+    margin-left: 72%;
+    background-color: #302b2b;
+    padding: 5px;
+    position: absolute;
+    display: none;
+    grid-template-rows: 8fr 0.03fr;
+    grid-template-areas: "visor" "boton"; }
+    header .navBar .carrito1 .visorProductos {
+      width: 90%;
+      height: 80%;
+      margin: 20px auto -15px;
+      overflow-y: scroll;
+      grid-area: visor;
+      background-color: #D5D5D4;
+      display: flex;
+      flex-direction: column; }
+      header .navBar .carrito1 .visorProductos li {
+        width: 90%;
+        margin-top: 10px;
+        margin-left: 15px;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: .7fr .5fr;
+        grid-template-areas: "img title cant" "img cont cant"; }
+        header .navBar .carrito1 .visorProductos li img {
+          width: 50px;
+          height: 50px;
+          grid-area: img;
+          margin: auto;
+          margin-right: 15px; }
+        header .navBar .carrito1 .visorProductos li h6 {
+          grid-area: title;
+          font-size: .8rem;
+          margin-top: auto;
+          margin-bottom: auto;
+          text-align: center; }
+        header .navBar .carrito1 .visorProductos li h5 {
+          grid-area: cont;
+          font-size: .7rem;
+          text-align: center; }
+        header .navBar .carrito1 .visorProductos li button {
+          width: 30px;
+          height: 30px;
+          margin-top: 7px;
+          margin-left: 15px;
+          border: 0;
+          background-color: #000;
+          color: #fff;
+          grid-area: cant; }
+        header .navBar .carrito1 .visorProductos li button:hover {
+          cursor: pointer; }
+    header .navBar .carrito1 .compraFinalizada {
+      grid-area: boton;
+      margin-top: -35px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      header .navBar .carrito1 .compraFinalizada div {
+        width: 90%;
+        height: 20%;
+        padding: 2px;
+        margin-top: -10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        header .navBar .carrito1 .compraFinalizada div h5 {
+          font-size: medium;
+          margin: auto 20px;
+          color: #ccc; }
+      header .navBar .carrito1 .compraFinalizada button {
+        width: 50%;
+        height: 30px;
+        margin-bottom: 15px;
+        border: 1px solid #000;
+        border-radius: 30px;
+        background-color: #E9E9E9;
+        transition: 500ms; }
+      header .navBar .carrito1 .compraFinalizada button:hover {
+        cursor: pointer;
+        background-color: #ccc; }
+  header .navBar .visor {
+    display: grid; }
 
 .acceso {
   width: 100%;

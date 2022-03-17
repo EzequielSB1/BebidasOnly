@@ -464,7 +464,7 @@ function renderizarCarrito() {
         }, 0);
         // Creamos el nodo del item del carrito
         const miNodo = document.createElement('li');
-        miNodo.innerHTML = `<img src=${miItem[0].imagen}> <h6>${miItem[0].nombre} - ${miItem[0].precio}${divisa}</h6>`;
+        miNodo.innerHTML = `<img src=${miItem[0].imagen}> <h6>${miItem[0].nombre} - ${miItem[0].precio}${divisa}</h6><h5>\nCantidad: ${numeroUnidadesItem}</h5>`;
         // Boton de borrar
         const miBoton = document.createElement('button');
         miBoton.dataset.item = item;

@@ -300,10 +300,6 @@ const productoV20 = new producto ('Viña de balbo tinto', 2000, 120, 0, 'Vinos',
 
 const productos = [productoA1, productoA2, productoA3, productoA4, productoA5, productoA6, productoA7, productoA8, productoA9, productoA10, productoA11, productoA12, productoA13, productoA14, productoA15, productoA16, productoA17, productoA18, productoA19, productoBB1, productoBB2, productoBB3, productoBB4, productoBB5, productoBB6, productoBB7, productoBB8, productoBB9, productoBB10, productoBB11, productoBB12, productoBB13, productoBB14, productoBB15, productoBB16, productoBB17, productoBB18, productoBB19, productoBB20, productoBB21, productoBB22, productoBB23, productoBB24, productoBB25, productoBB26, productoBB27, productoBB28, productoBB29, productoBB30, productoBB31, productoBB32, productoBB33, productoBB34, productoBA1, productoBA2, productoBA3, productoBA4, productoBA5, productoBA6, productoBA7, productoBA8, productoBA9, productoBA10, productoBA11, productoBA12, productoBA13, productoBA14, productoBA15, productoC1, productoC2, productoC3, productoC4, productoC5, productoC6, productoC7, productoC8, productoC9, productoC10, productoC11, productoC12, productoC13, productoC14, productoC15, productoC16, productoC17, productoC18, productoCh1, productoCh2, productoCh3, productoCh4, productoCh5, productoCh6, productoCh7, productoCh8, productoCh9, productoCh10, productoCh11, productoCh12, productoCh13, productoCh14, productoPack1, productoPack2, productoPack3, productoPack4, productoPack5, productoV1, productoV2, productoV3, productoV4, productoV5, productoV6, productoV7, productoV8, productoV9, productoV10, productoV11, productoV12, productoV13, productoV14, productoV15, productoV16, productoV17, productoV18, productoV19, productoV20];
 
-let contadorTipo = 0;
-
-let contadorCarrito = 0;
-
 let precioTotal = document.querySelector('#precioFinal');
 
 let carrito = [];

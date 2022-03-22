@@ -4,41 +4,44 @@ let botonCrear = document.querySelector('.cambio');
 let verForm = document.querySelector('.formCrear')
 botonCrear.addEventListener('click', () => verForm.classList.toggle('formVer'));
 
-// script para el form de ingreso.
+// se guardan los form de crear usuarios.
+
+let localStorage = localStorage;
+
+crearUsuario.addEventListener("focusout", function() {
+    localStorage.setItem("fn", crearUsuario.value);
+  })
+
+  crearPassword.addEventListener("focusout", function() {
+    localStorage.setItem("ln", crearPassword.value);
+  })
+
+  function recuperoValores() {
+    crearUsuario.value = localStorage.getItem("fn");
+    crearPassword.value = localStorage.getItem("ln");
+  }
+
+  document.addEventListener("DOMContentLoaded", recuperoValores);
+
+// verificacion
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("formulario").addEventListener('submit', validarFormulario); 
-});
-
-const visorIngreso = document.querySelector('.borForm');
+  });
   
-function validarFormulario(evento) {
-  evento.preventDefault();
-  var usuario = document.getElementById('usuario').value;
-  if(usuario.length == 0) {
-    let container = document.createElement("p");
-    container.innerHTML = 'No has escrito nada en el usuario'
-    visorIngreso.append(container);
-    return;
+  function validarFormulario() {
+    verificarLocal()
+    let ingreso = {
+        usuario : document.getElementById('usuario').value,
+        clave : document.getElementById('password').value}
+
+    ingreso.usuario == 'fn' ? alert('Los datos son correctos') : alert('las cuentas son incorrectas')
+    
+    this.submit();
   }
-  var clave = document.getElementById('password').value;
-  if (clave.length < 6) {
-    let container = document.createElement("p");
-    container.innerHTML = 'La clave no es valida'
-    visorIngreso.append(container);
-    return;
-  }
-  this.submit();
+function verificarLocal() {
+  let mostrarUsuario = localStorage.getItem('localStorageCuentas');
+  
+  cuentas = JSON.parse(mostrarUsuario);
+
+  return cuentas;
 }
-
-// guardar datos en el local stronge
-
-// const botonDeRegistro = document.querySelector('#crearCuenta')
-// botonDeRegistro.addEventListener('submit', guardarRegistroLocalStronge);
-
-// guardarRegistroLocalStronge(){
-//   // escogemos dos funciones para guardar datos por separado
-//   guardarUsuarioEnLocalStorage()
-//   guardarPasswordEnLocalStorage()
-// }
-
-// aun no se me ocurre como logro resolver como guardar los datos del registro en el local stronge para que se usen para verificar una cuenta, asi que a las cuentas se entre poniendo cualquier letra de usuario y una contrasenia de cualquier combinacion de 6 digitos por ahora, para la proxima entrega voy a tratar de que haya un local stronge tambien en el formulario del registro pero por ahora solamente tiene el local stronge en el carrito de compras, que tampoco esta terminado le faltan algunas cosas.

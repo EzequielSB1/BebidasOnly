@@ -43,10 +43,6 @@ body {
       font-size: 2.5rem;
       text-align: center;
       margin-bottom: 5px; }
-    .entry .formularios form .borForm p, .entry .formularios form .crearForm p {
-      font-size: 1rem;
-      letter-spacing: 1px;
-      text-align: center; }
     .entry .formularios form .borForm input, .entry .formularios form .borForm button, .entry .formularios form .crearForm input, .entry .formularios form .crearForm button {
       height: 40px;
       padding: 15px;
@@ -57,7 +53,7 @@ body {
     .entry .formularios form .borForm .crear, .entry .formularios form .crearForm .crear {
       height: 50px;
       width: 50%;
-      margin: 10px auto;
+      margin: 20px auto 10px;
       border: 1px solid #D5D5D4;
       background-color: #DFDFDE; }
       .entry .formularios form .borForm .crear:hover, .entry .formularios form .crearForm .crear:hover {

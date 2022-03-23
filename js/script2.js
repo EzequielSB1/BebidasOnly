@@ -30,30 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
   
 function validarFormulario() {
   recuperoValores()
+
   
-  // let usuario = document.querySelector('#usuario').value;
-  // let password = document.querySelector('#password').value;
-
-  // return usuario == crearUsuario.value ? console.log('usuario correcto') : alert('usuario incorrecta');
-    
-  // return password == crearPassword.value ? console.log('contrasenia correcta') : alert('contrasenia incorrecta');
-
-  validarUsuario()
-
-  validarPassword()
-
-  // this.submit();
-}
-
-function validarUsuario() {
   let usuario = document.querySelector('#usuario').value;
-  
-  return usuario == crearUsuario.value ? console.log('usuario correcto') : alert('usuario incorrecta');
-}
-
-function validarPassword() {
   let password = document.querySelector('#password').value;
 
-  return password == crearPassword.value ? console.log('contrasenia correcta') : alert('contrasenia incorrecta');
+  return usuario == crearUsuario.value && password == crearPassword.value ? this.submit() : alert('usuario o contrasenia incorrecta');
 }
-

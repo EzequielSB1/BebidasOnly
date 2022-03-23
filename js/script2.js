@@ -6,19 +6,19 @@ botonCrear.addEventListener('click', () => verForm.classList.toggle('formVer'));
 
 // se guardan los form de crear usuarios.
 
-let localStorage = localStorage;
+let l = localStorage;
 
 crearUsuario.addEventListener("focusout", function() {
-    localStorage.setItem("fn", crearUsuario.value);
+    l.setItem("fn", crearUsuario.value);
   })
 
   crearPassword.addEventListener("focusout", function() {
-    localStorage.setItem("ln", crearPassword.value);
+    l.setItem("ln", crearPassword.value);
   })
 
   function recuperoValores() {
-    crearUsuario.value = localStorage.getItem("fn");
-    crearPassword.value = localStorage.getItem("ln");
+    crearUsuario.value = l.getItem("fn");
+    crearPassword.value = l.getItem("ln");
   }
 
   document.addEventListener("DOMContentLoaded", recuperoValores);
@@ -28,20 +28,32 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("formulario").addEventListener('submit', validarFormulario); 
   });
   
-  function validarFormulario() {
-    verificarLocal()
-    let ingreso = {
-        usuario : document.getElementById('usuario').value,
-        clave : document.getElementById('password').value}
-
-    ingreso.usuario == 'fn' ? alert('Los datos son correctos') : alert('las cuentas son incorrectas')
-    
-    this.submit();
-  }
-function verificarLocal() {
-  let mostrarUsuario = localStorage.getItem('localStorageCuentas');
+function validarFormulario() {
+  recuperoValores()
   
-  cuentas = JSON.parse(mostrarUsuario);
+  // let usuario = document.querySelector('#usuario').value;
+  // let password = document.querySelector('#password').value;
 
-  return cuentas;
+  // return usuario == crearUsuario.value ? console.log('usuario correcto') : alert('usuario incorrecta');
+    
+  // return password == crearPassword.value ? console.log('contrasenia correcta') : alert('contrasenia incorrecta');
+
+  validarUsuario()
+
+  validarPassword()
+
+  // this.submit();
 }
+
+function validarUsuario() {
+  let usuario = document.querySelector('#usuario').value;
+  
+  return usuario == crearUsuario.value ? console.log('usuario correcto') : alert('usuario incorrecta');
+}
+
+function validarPassword() {
+  let password = document.querySelector('#password').value;
+
+  return password == crearPassword.value ? console.log('contrasenia correcta') : alert('contrasenia incorrecta');
+}
+

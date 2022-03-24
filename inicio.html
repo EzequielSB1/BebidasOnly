@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link css -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- Link fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- logo -->
@@ -16,7 +17,7 @@
 <body>
     <header>
         <div class="navBar">
-            <a href="./index.html" class="logo">
+            <a href="./inicio.html" class="logo">
                 <img src="assets/img/cerveza.svg" alt="logo de un vaso y una botella">
                 <h2>Bebidas Only</h2>
             </a>
@@ -24,32 +25,33 @@
                 <button class="botonMenu"><img src="./assets/img/menu.svg" alt="menu-hamburguesa"></button>
                 <nav class="nav">
                     <ul>
-                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./inicio.html">Inicio</a></li>
                         <li><a href="./nosotros.html">Sobre nosotros</a></li>
                         <li><a href="./contacto.html">Contacto</a></li>
                         
                     </ul>
                 </nav>
             </div>
-            <div class="botonCarrito">
-                <img src="./assets/img/carrito.svg" alt="carrito">
-            </div>
-            <div class="carrito1">
-                <ul class="visorProductos">
-                </ul>
-                <div class="compraFinalizada">
-                    <div>
-                        <h5>Precio final:</h5>
-                        <h5 id="precioFinal"></h5>
+            <div class="carritoDiv">        
+                <div class="botonCarrito">
+                    <img src="./assets/img/carrito.svg" alt="carrito">
+                </div>
+                <div class="carrito1">
+                    <ul class="visorProductos">
+                    </ul>
+                    <div class="compraFinalizada">
+                        <div>
+                            <h5>Precio final:</h5>
+                            <h5 id="precioFinal"></h5>
+                        </div>
+                        <button><a href="finalizarCompra.html"> Finalizar compra</a></button>
+                        <button id="botonVaciar">Limpiar carrito</button>
                     </div>
-                    <button>Comprar</button>
-                    <button id="botonVaciar">Limpiar carrito</button>
                 </div>
             </div>
         </div>
     </header>
     <main class="acceso">
-        
         <section class="buscador">
             <button class="botonFiltroA">
                 <img src="./assets/img/campari.svg" alt="Aperitivos">
@@ -95,5 +97,9 @@
 
     <!-- JS -->
     <script src="./js/script1.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./js/scroll.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="sweetalert2.all.min.js"></script>
 </body>
 </html>

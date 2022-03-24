@@ -369,6 +369,7 @@ function renderTarjetasProductos(arrayProductos) {
 
 
 
+
 // botones y productos filtrados
 let botonFiltroA = document.querySelector('.botonFiltroA')
 
@@ -434,6 +435,14 @@ function agregarProducto(e) {
     renderizarCarrito();
     // Actualizamos el LocalStorage
     guardarCarritoEnLocalStorage();
+    // alerta de producto agregado
+    Toastify({
+
+        text: `Se agrego un producto al carrito`,
+        
+        duration: 750
+        
+        }).showToast();
 }
 
 /**
@@ -469,10 +478,13 @@ function renderizarCarrito() {
         // Mezclamos nodos
         miNodo.appendChild(miBoton);
         visorCarrito.appendChild(miNodo);
+        // muestra de producto agregado
+    
     });
     // Renderizamos el precio total en el HTML
     precioTotal.textContent = calcularTotal();
 }
+
 
 /**
 * Evento para borrar un elemento del carrito
@@ -517,7 +529,6 @@ function vaciarCarrito() {
     renderizarCarrito();
     // Borra LocalStorage
     localStorage.clear();
-
 }
 
 function guardarCarritoEnLocalStorage () {

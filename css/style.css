@@ -12,7 +12,6 @@ body {
 .entry {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
   grid-template-areas: "img form"; }
   .entry .bgImg {
     grid-area: img;
@@ -108,30 +107,30 @@ header .navBar {
           header .navBar .menu .nav ul li a:hover {
             text-decoration: underline;
             cursor: pointer; }
-  header .navBar .botonCarrito {
+  header .navBar .carritoDiv .botonCarrito {
     grid-area: carrito;
     margin: 0 25px 10px;
     align-items: flex-end;
     display: flex;
     justify-content: end; }
-    header .navBar .botonCarrito:hover {
+    header .navBar .carritoDiv .botonCarrito:hover {
       cursor: pointer; }
-    header .navBar .botonCarrito img {
+    header .navBar .carritoDiv .botonCarrito img {
       width: 50px;
       height: 50px;
       margin-top: 8px; }
-  header .navBar .carrito1 {
+  header .navBar .carritoDiv .carrito1 {
     width: 350px;
     height: 500px;
-    margin-top: 65px;
-    margin-left: 72%;
+    margin-left: -20%;
     background-color: #302b2b;
     padding: 5px;
+    z-index: 2;
     position: absolute;
     display: none;
     grid-template-rows: 8fr 0.03fr;
     grid-template-areas: "visor" "boton"; }
-    header .navBar .carrito1 .visorProductos {
+    header .navBar .carritoDiv .carrito1 .visorProductos {
       width: 90%;
       height: 80%;
       margin: 20px auto -15px;
@@ -140,7 +139,7 @@ header .navBar {
       background-color: #D5D5D4;
       display: flex;
       flex-direction: column; }
-      header .navBar .carrito1 .visorProductos li {
+      header .navBar .carritoDiv .carrito1 .visorProductos li {
         width: 90%;
         margin-top: 10px;
         margin-left: 15px;
@@ -148,23 +147,23 @@ header .navBar {
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-rows: .7fr .5fr;
         grid-template-areas: "img title cant" "img cont cant"; }
-        header .navBar .carrito1 .visorProductos li img {
+        header .navBar .carritoDiv .carrito1 .visorProductos li img {
           width: 50px;
           height: 50px;
           grid-area: img;
           margin: auto;
           margin-right: 15px; }
-        header .navBar .carrito1 .visorProductos li h6 {
+        header .navBar .carritoDiv .carrito1 .visorProductos li h6 {
           grid-area: title;
           font-size: .8rem;
           margin-top: auto;
           margin-bottom: auto;
           text-align: center; }
-        header .navBar .carrito1 .visorProductos li h5 {
+        header .navBar .carritoDiv .carrito1 .visorProductos li h5 {
           grid-area: cont;
           font-size: .7rem;
           text-align: center; }
-        header .navBar .carrito1 .visorProductos li button {
+        header .navBar .carritoDiv .carrito1 .visorProductos li button {
           width: 30px;
           height: 30px;
           margin-top: 7px;
@@ -173,15 +172,15 @@ header .navBar {
           background-color: #000;
           color: #fff;
           grid-area: cant; }
-        header .navBar .carrito1 .visorProductos li button:hover {
+        header .navBar .carritoDiv .carrito1 .visorProductos li button:hover {
           cursor: pointer; }
-    header .navBar .carrito1 .compraFinalizada {
+    header .navBar .carritoDiv .carrito1 .compraFinalizada {
       grid-area: boton;
       margin-top: -35px;
       display: flex;
       flex-direction: column;
       align-items: center; }
-      header .navBar .carrito1 .compraFinalizada div {
+      header .navBar .carritoDiv .carrito1 .compraFinalizada div {
         width: 90%;
         height: 20%;
         padding: 2px;
@@ -190,11 +189,11 @@ header .navBar {
         display: flex;
         flex-direction: row;
         justify-content: space-between; }
-        header .navBar .carrito1 .compraFinalizada div h5 {
+        header .navBar .carritoDiv .carrito1 .compraFinalizada div h5 {
           font-size: medium;
           margin: auto 20px;
           color: #ccc; }
-      header .navBar .carrito1 .compraFinalizada button {
+      header .navBar .carritoDiv .carrito1 .compraFinalizada button {
         width: 50%;
         height: 30px;
         margin-bottom: 15px;
@@ -202,10 +201,13 @@ header .navBar {
         border-radius: 30px;
         background-color: #E9E9E9;
         transition: 500ms; }
-      header .navBar .carrito1 .compraFinalizada button:hover {
+        header .navBar .carritoDiv .carrito1 .compraFinalizada button a {
+          text-decoration: none;
+          color: #000; }
+      header .navBar .carritoDiv .carrito1 .compraFinalizada button:hover {
         cursor: pointer;
         background-color: #ccc; }
-  header .navBar .visor {
+  header .navBar .carritoDiv .visor {
     display: grid; }
 
 .acceso {
@@ -373,11 +375,23 @@ footer {
           cursor: pointer;
           background-color: #D5D5D4; }
 
+@media only screen and (max-width: 1300px) {
+  header .navBar .carritoDiv .carrito1 {
+    margin-left: -22%; } }
+
+@media only screen and (max-width: 1200px) {
+  header .navBar .carritoDiv .carrito1 {
+    margin-left: -25%; } }
+
+@media only screen and (max-width: 1000px) {
+  header .navBar .carritoDiv .carrito1 {
+    margin-left: -28%; } }
+
 @media only screen and (max-width: 850px) {
   .contacto .contenedor {
     height: 50%; }
     .contacto .contenedor form {
-      grid-template-columns: 2fr;
+      grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
       grid-template-areas: "mensaje" "formulario"; }
       .contacto .contenedor form .formulario {
@@ -404,7 +418,13 @@ footer {
   .entry {
     grid-template-areas: "form form"; }
     .entry .bgImg {
-      display: none; } }
+      display: none; }
+  header .navBar .carritoDiv .carrito1 {
+    margin-left: -35%; } }
+
+@media only screen and (max-width: 700px) {
+  header .navBar .carritoDiv .carrito1 {
+    margin-left: -40%; } }
 
 @media only screen and (max-width: 550px) {
   header {
@@ -447,7 +467,11 @@ footer {
                 font-size: 2rem; }
         header .navBar .menu .menuVer {
           display: flex; }
-      header .navBar .botonCarrito {
+      header .navBar .carritoDiv .botonCarrito {
         margin: 0 80px 10px 0; }
-        header .navBar .botonCarrito .carrito1 {
-          margin-right: -30px; } }
+      header .navBar .carritoDiv .carrito1 {
+        margin-left: -55%; } }
+
+@media only screen and (max-width: 400px) {
+  header .navBar .carritoDiv .carrito1 {
+    margin-left: -62%; } }

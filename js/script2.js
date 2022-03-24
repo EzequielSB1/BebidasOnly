@@ -27,13 +27,13 @@ crearUsuario.addEventListener("focusout", function() {
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("formulario").addEventListener('submit', validarFormulario); 
   });
-  
+
 function validarFormulario() {
-  recuperoValores()
+  recuperoValores();
 
   
   let usuario = document.querySelector('#usuario').value;
   let password = document.querySelector('#password').value;
 
-  return usuario == crearUsuario.value && password == crearPassword.value ? this.submit() : alert('usuario o contrasenia incorrecta');
+  return usuario == crearUsuario.value && password == crearPassword.value ? this.submit() : alert('contrasenia o usuario incorrecto');
 }

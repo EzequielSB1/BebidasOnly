@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="navBar">
-            <a href="./index.html" class="logo">
+            <a href="./inicio.html" class="logo">
                 <img src="assets/img/cerveza.svg" alt="logo de un vaso y una botella">
                 <h2>Bebidas Only</h2>
             </a>
@@ -24,29 +24,27 @@
                 <button class="botonMenu"><img src="./assets/img/menu.svg" alt="menu-hamburguesa"></button>
                 <nav class="nav">
                     <ul>
-                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./inicio.html">Inicio</a></li>
                         <li><a href="./nosotros.html">Sobre nosotros</a></li>
                         <li><a href="./contacto.html">Contacto</a></li>
+                        
                     </ul>
                 </nav>
             </div>
-            <div class="botonCarrito">
-                <img src="./assets/img/carrito.svg" alt="carrito">
+            <div class="carritoDiv">        
+                <div class="botonCarrito">
+                    <img src="./assets/img/carrito.svg" alt="carrito">
+                </div>
                 <div class="carrito1">
-                    <div class="visorProductos">
-                        <div class="productoVista">
-                            <img src="./assets/img/productos/Aperitivos/AperitivoMarcela.jpg" alt="imagenDeProducto" id="imagenProducto">
-                            <h6 id="nombreProducto">Aperitivo Marcela</h6>
-                            <div id="contadorCantProductos">
-                                <button id="signoMenos"><img src="./assets/img/menos.svg" alt="signoMenos"></button>
-                                <p id="contadorProductos">0</p>
-                                <button id="signoMas"><img src="./assets/img/mas.svg" alt="signoMas"></button>
-                            </div>
-                        </div>
-                    </div>
+                    <ul class="visorProductos">
+                    </ul>
                     <div class="compraFinalizada">
+                        <div>
+                            <h5>Precio final:</h5>
+                            <h5 id="precioFinal"></h5>
+                        </div>
                         <button>Comprar</button>
-                        <button>Limpiar carrito</button>
+                        <button id="botonVaciar">Limpiar carrito</button>
                     </div>
                 </div>
             </div>

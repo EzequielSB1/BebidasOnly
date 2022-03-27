@@ -1,0 +1,1127 @@
+[
+    {
+        "nombre": "Aperitivo Marcela",
+        "stock": 500,
+        "precio": 170,
+        "descuento": 0,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/AperitivoMarcela.jpg",
+        "id": 1
+    },
+    {
+        "nombre": "Campari 750cc",
+        "stock": 200,
+        "precio": 350,
+        "descuento": 0.5,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/CampariBotella.jpg",
+        "id": 2
+    },
+    {
+        "nombre": "Cynar 700cc",
+        "stock": 250,
+        "precio": 700,
+        "descuento": 0,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/CynarBotella.jpg",
+        "id": 3
+    },
+    {
+        "nombre": "Cynar 70 proof",
+        "stock": 150,
+        "precio": 1100,
+        "descuento": 0,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/CynarBotella70proof.jpg",
+        "id": 4
+    },
+    {
+        "nombre": "Dr. Lemon de limon en lata",
+        "stock": 2000,
+        "precio": 170,
+        "descuento": 0.35,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/DRLemonLata(Limon).jpg",
+        "id": 5
+    },
+    {
+        "nombre": "DR. Lemon de pomelo en lata",
+        "stock": 2000,
+        "precio": 170,
+        "descuento": 0.35,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/DRLemonLata(Pomelo).jpg",
+        "id": 6
+    },
+    {
+        "nombre": "DR. Lemon de vodka en lata",
+        "stock": 2000,
+        "precio": 170,
+        "descuento": 0.35,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/DRLemonLata(Vodka).jpg",
+        "id": 7
+    },
+    {
+        "nombre": "DR. Lemon XL de limon",
+        "stock": 1000,
+        "precio": 250,
+        "descuento": 0.5,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/DRLemonXL(Limon).jpg",
+        "id": 8
+    },
+    {
+        "nombre": "DR. Lemon XL de mojito",
+        "stock": 1000,
+        "precio": 250,
+        "descuento": 0.5,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/DRLemonXL(Mojito).jpg",
+        "id": 9
+    },
+    {
+        "nombre": "DR. Lemon XL de pomelo",
+        "stock": 1000,
+        "precio": 250,
+        "descuento": 0.5,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/DRLemonXL(Pomelo).jpg",
+        "id": 10
+    },
+    {
+        "nombre": "DR. Lemon XL de vodka",
+        "stock": 1000,
+        "precio": 250,
+        "descuento": 0.5,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/DRLemonXL(Vodka).jpg",
+        "id": 11
+    },
+    {
+        "nombre": "Fernet 1882 750 cc",
+        "stock": 1000,
+        "precio": 450,
+        "descuento": 0,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/Fernet1882Botella.jpg",
+        "id": 12
+    },
+    {
+        "nombre": "Fernet 1882 en lata",
+        "stock": 2000,
+        "precio": 200,
+        "descuento": 0.35,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/Fernet1882Lata.jpg",
+        "id": 13
+    },
+    {
+        "nombre": "Fernet branca 450 cc",
+        "stock": 1500,
+        "precio": 520,
+        "descuento": 0,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/FernetBrancaBotellaChica.jpg",
+        "id": 14
+    },
+    {
+        "nombre": "Fernet branca 750 cc",
+        "stock": 1200,
+        "precio": 850,
+        "descuento": 0,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/FernetBrancaBotellaGrande.jpg",
+        "id": 15
+    },
+    {
+        "nombre": "Fernet branca menta 450 cc",
+        "stock": 2000,
+        "precio": 430,
+        "descuento": 0,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/FernetBrancaMentaBotellaChica.jpg",
+        "id": 16
+    },
+    {
+        "nombre": "Fernet branca menta 750 cc",
+        "stock": 1500,
+        "precio": 720,
+        "descuento": 0,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/FernetBrancaMentaBotellaGrande.jpg",
+        "id": 17
+    },
+    {
+        "nombre": "Fernet vittone 750 cc",
+        "stock": 1500,
+        "precio": 450,
+        "descuento": 0,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/FernetVittoneBotella.jpg",
+        "id": 18
+    },
+    {
+        "nombre": "Gancia 1L",
+        "stock": 1500,
+        "precio": 600,
+        "descuento": 0,
+        "categoria": "Aperitivos",
+        "imagen": "./assets/img/productos/Aperitivos/GanciaBotella.jpg",
+        "id": 19
+    },
+    {
+        "nombre": "Absolut apeach 750ml",
+        "stock": 300,
+        "precio": 2000,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/AbsolutApeach.jpg",
+        "id": 20
+    },
+    {
+        "nombre": "Absolut grapefruit 750ml",
+        "stock": 300,
+        "precio": 2000,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/AbsolutGrapefruit.jpg",
+        "id": 21
+    },
+    {
+        "nombre": "Absolut mango 750ml",
+        "stock": 300,
+        "precio": 2000,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/AbsolutMango.jpg",
+        "id": 22
+    },
+    {
+        "nombre": "Absolut vainilla 750ml",
+        "stock": 300,
+        "precio": 2000,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/AbsolutVainilla.jpg",
+        "id": 23
+    },
+    {
+        "nombre": "Beefeater gin",
+        "stock": 400,
+        "precio": 2800,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/BeefeaterGin(original).jpg",
+        "id": 24
+    },
+    {
+        "nombre": "Bombay gin",
+        "stock": 1000,
+        "precio": 2500,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/BombayGin.jpg",
+        "id": 25
+    },
+    {
+        "nombre": "Coñac Otard",
+        "stock": 500,
+        "precio": 1900,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/ConiacOtard.jpg",
+        "id": 26
+    },
+    {
+        "nombre": "Hendricks gin original",
+        "stock": 1000,
+        "precio": 3200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/HendricksGin(original).jpg",
+        "id": 27
+    },
+    {
+        "nombre": "Licor amarula",
+        "stock": 1500,
+        "precio": 1200,
+        "descuento": 0.5,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/LicorAmarula.jpg",
+        "id": 28
+    },
+    {
+        "nombre": "Licor Baileys",
+        "stock": 2000,
+        "precio": 2100,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/LicorBaileys.jpg",
+        "id": 29
+    },
+    {
+        "nombre": "Licor cusenier de blue",
+        "stock": 2000,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/LicorCusenier(blue).jpg",
+        "id": 30
+    },
+    {
+        "nombre": "Licor cusenier de cafe",
+        "stock": 2000,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/LicorCusenier(cafe).jpg",
+        "id": 31
+    },
+    {
+        "nombre": "Licor cusenier de chocolate",
+        "stock": 2000,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/LicorCusenier(chocolate).jpg",
+        "id": 32
+    },
+    {
+        "nombre": "Licor cusenier de dulce de leche",
+        "stock": 2000,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/LicorCusenier(dulceDeLeche).jpg",
+        "id": 33
+    },
+    {
+        "nombre": "Licor cusenier de huevo",
+        "stock": 2000,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/LicorCusenier(huevo).jpg",
+        "id": 34
+    },
+    {
+        "nombre": "Licor cusenier de miel",
+        "stock": 2000,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/LicorCusenier(miel).jpg",
+        "id": 35
+    },
+    {
+        "nombre": "Orloff gin",
+        "stock": 1200,
+        "precio": 750,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/OrloffGin.jpg",
+        "id": 36
+    },
+    {
+        "nombre": "Orloff vodka",
+        "stock": 1500,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/OrloffVodka.jpg",
+        "id": 37
+    },
+    {
+        "nombre": "Ron havana club blanco",
+        "stock": 1000,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/RonHavanaClubBlanco.jpg",
+        "id": 38
+    },
+    {
+        "nombre": "Ron havana club dorado",
+        "stock": 1200,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/RonHavanaClubDorado.jpg",
+        "id": 39
+    },
+    {
+        "nombre": "Smirnoff grapefruit",
+        "stock": 2000,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/SmirnoffBotella(grapefruit).jpg",
+        "id": 40
+    },
+    {
+        "nombre": "Smirnoff citrus",
+        "stock": 2000,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/SmirnoffBotella(citrus).jpg",
+        "id": 41
+    },
+    {
+        "nombre": "Smirnoff original",
+        "stock": 2000,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/SmirnoffBotella(original).jpg",
+        "id": 42
+    },
+    {
+        "nombre": "Smirnoff green apple en lata",
+        "stock": 2000,
+        "precio": 200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/SmirnoffLata(GreenApple).jpg",
+        "id": 43
+    },
+    {
+        "nombre": "Smirnoff original en lata",
+        "stock": 2000,
+        "precio": 200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/SmirnoffLata(original).jpg",
+        "id": 44
+    },
+    {
+        "nombre": "Smirnoff red berrie en lata",
+        "stock": 2000,
+        "precio": 200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/SmirnoffLata(RedBerrie).jpg",
+        "id": 45
+    },
+    {
+        "nombre": "Tanqueray gin original",
+        "stock": 1200,
+        "precio": 2500,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/TanquerayGin(original).jpg",
+        "id": 46
+    },
+    {
+        "nombre": "Whisky chivas regal",
+        "stock": 1500,
+        "precio": 2100,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/WhiskyChivasRegal.jpg",
+        "id": 47
+    },
+    {
+        "nombre": "Whisky chivas regal 1L",
+        "stock": 1500,
+        "precio": 2500,
+        "descuento": 0, 
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/WhiskyChivasRegal1l.jpg",
+        "id": 48
+    },
+    {
+        "nombre": "Whisky chivas regal 500ml",
+        "stock": 1500,
+        "precio": 1800,
+        "descuento": 0.5,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/WhiskyChivasRegal500ml.jpg",
+        "id": 49
+    },
+    {
+        "nombre": "Whisky J&B",
+        "stock": 1500,
+        "precio": 2900,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/WhiskyJ&B.jpg",
+        "id": 50
+    },
+    {
+        "nombre": "Whisky jack daniels",
+        "stock": 1300,
+        "precio": 4000,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/WhiskyJackDaniels.jpg",
+        "id": 51
+    },
+    {
+        "nombre": "Whisky jonnie walker goldlabel",
+        "stock": 1500,
+        "precio": 6000,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/WhiskyJonnieWalker(goldlabel).jpg",
+        "id": 52
+    },
+    {
+        "nombre": "Whisky vat 69",
+        "stock": 3500,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Bebidas blancas",
+        "imagen": "./assets/img/productos/BebidasBlancas/WhiskyVat69.jpg",
+        "id": 53
+    },
+    {
+        "nombre": "Coca cola de 1,25L",
+        "stock": 2000,
+        "precio": 170,
+        "descuento": 0.5,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/CocaCola(1,25L).jpg",
+        "id": 54
+    },
+    {
+        "nombre": "Coca cola de 2,25L",
+        "stock": 2000,
+        "precio": 230,
+        "descuento": 0.5,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/CocaCola(2,25L).jpg",
+        "id": 55
+    },
+    {
+        "nombre": "Coca cola en lata",
+        "stock": 3000,
+        "precio": 120,
+        "descuento": 0.35,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/CocaColaLata.jpg",
+        "id": 56
+    },
+    {
+        "nombre": "Fanta de 1,75L",
+        "stock": 2000,
+        "precio": 135,
+        "descuento": 0.5,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/Fanta(1,75L).jpg",
+        "id": 57
+    },
+    {
+        "nombre": "Fanta de 2,25L",
+        "stock": 2000,
+        "precio": 185,
+        "descuento": 0.5,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/Fanta(2,25L).jpg",
+        "id": 58
+    },
+    {
+        "nombre": "Fanta en lata",
+        "stock": 3000,
+        "precio": 90,
+        "descuento": 0.35,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/FantaLata.jpg",
+        "id": 59
+    },
+    {
+        "nombre": "Sheweppes tonica de 1,5L",
+        "stock": 2000,
+        "precio": 220,
+        "descuento": 0.5,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/SheweppesTonica(1,5L).jpg",
+        "id": 60
+    },
+    {
+        "nombre": "Sheweppes tonica en lata",
+        "stock": 3000,
+        "precio": 120,
+        "descuento": 0.35,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/SheweppesTonicaLata.jpg",
+        "id": 61
+    },
+    {
+        "nombre": "Sprite de 1,75L",
+        "stock": 2000,
+        "precio": 150,
+        "descuento": 0.5,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/Sprite(1,75L).jpg",
+        "id": 62
+    },
+    {
+        "nombre": "Sprite de 2,25L",
+        "stock": 2000,
+        "precio": 175,
+        "descuento": 0.5,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/Sprite(2,25L).jpg",
+        "id": 63
+    },
+    {
+        "nombre": "Sprite en lata",
+        "stock": 3000,
+        "precio": 120,
+        "descuento": 0.35,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/SpriteLata.jpg",
+        "id": 64
+    },
+    {
+        "nombre": "Terma citrus",
+        "stock": 2000,
+        "precio": 150,
+        "descuento": 0,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/TermaCitrus.jpg",
+        "id": 65
+    },
+    {
+        "nombre": "Terma Limon",
+        "stock": 2000,
+        "precio": 150,
+        "descuento": 0,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/TermaLimon.jpg",
+        "id": 66
+    },
+    {
+        "nombre": "Terma patagonica",
+        "stock": 2000,
+        "precio": 150,
+        "descuento": 0,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/TermaPatagonica.jpg",
+        "id": 67
+    },
+    {
+        "nombre": "Terma serrano",
+        "stock": 2000,
+        "precio": 150,
+        "descuento": 0,
+        "categoria": "Bebidas sin alcohol",
+        "imagen": "./assets/img/productos/BebidasSinAlcohol/TermaSerrano.jpg",
+        "id": 68
+    },
+    {
+        "nombre": "Brahama rubia en lata",
+        "stock": 3000,
+        "precio": 130,
+        "descuento": 0.5,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/BrahamaRubiaLata.jpg",
+        "id": 69
+    },
+    {
+        "nombre": "Corona rubia",
+        "stock": 2000,
+        "precio": 280,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/CoronaRubiaBotella.jpg",
+        "id": 70
+    },
+    {
+        "nombre": "Heineken rubia",
+        "stock": 2000,
+        "precio": 230,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/HeinekenRubiaBotella.jpg",
+        "id": 71
+    },
+    {
+        "nombre": "Heineken rubia en lata",
+        "stock": 3000,
+        "precio": 230,
+        "descuento": 0.5,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/HeinekenRubiaLata.jpg",
+        "id": 72
+    },
+    {
+        "nombre": "Imperial golden en lata",
+        "stock": 3000,
+        "precio": 120,
+        "descuento": 0.5,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/ImperialGoldenLata.jpg",
+        "id": 73
+    },
+    {
+        "nombre": "Imperial rubia en lata",
+        "stock": 3000,
+        "precio": 150,
+        "descuento": 0.35,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/ImperialRubiaLata.jpg",
+        "id": 74
+    },
+    {
+        "nombre": "Miller rubia en lata",
+        "stock": 3000,
+        "precio": 160,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/MillerRubiaLata.jpg",
+        "id": 75
+    },
+    {
+        "nombre": "Patagonia roja",
+        "stock": 2000,
+        "precio": 250,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/PatagoniaRojaBotella.jpg",
+        "id": 76
+    },
+    {
+        "nombre": "Patagonia rubia",
+        "stock": 2000,
+        "precio": 250,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/PatagoniaRubiaBotella.jpg",
+        "id": 77
+    },
+    {
+        "nombre": "Quilmes negra en lata",
+        "stock": 3000,
+        "precio": 100,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/QuilmesNegraLata.jpg",
+        "id": 78
+    },
+    {
+        "nombre": "Quilmes rubia",
+        "stock": 2000,
+        "precio": 200,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/QuilmesRubiaBotella.jpg",
+        "id": 79
+    },
+    {
+        "nombre": "Quilmes rubia en lata",
+        "stock": 3000,
+        "precio": 100,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/QuilmesRubiaLata.jpg",
+        "id": 80
+    },
+    {
+        "nombre": "Salta roja en lata",
+        "stock": 3000,
+        "precio": 120,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/SaltaRojaLata.jpg",
+        "id": 81
+    },
+    {
+        "nombre": "Salta rubia en lata",
+        "stock": 3000,
+        "precio": 120,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/SaltaRubiaLata.jpg",
+        "id": 82
+    },
+    {
+        "nombre": "Scheneider rubia en lata",
+        "stock": 3000,
+        "precio": 180,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/ScheneiderRubiaLata.jpg",
+        "id": 83
+    },
+    {
+        "nombre": "Stella artois",
+        "stock": 2000,
+        "precio": 300,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/StellaArtoisBotella.jpg",
+        "id": 84
+    },
+    {
+        "nombre": "Stella artois en lata",
+        "stock": 3000,
+        "precio": 250,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/StellaArtoisLata.jpg",
+        "id": 85
+    },
+    {
+        "nombre": "Stella artois petite",
+        "stock": 4000,
+        "precio": 180,
+        "descuento": 0,
+        "categoria": "Cervezas",
+        "imagen": "./assets/img/productos/Cerveza/StellaArtoispetite.jpg",
+        "id": 86
+    },
+    {
+        "nombre": "Baron B rose",
+        "stock": 2000,
+        "precio": 2800,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/BaronBRose.jpg",
+        "id": 87
+    },
+    {
+        "nombre": "Chandon rose",
+        "stock": 3000,
+        "precio": 1500,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/ChandonRose.jpg",
+        "id": 88
+    },
+    {
+        "nombre": "Dolores brut",
+        "stock": 2500,
+        "precio": 2000,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/DoloresBrut.jpg",
+        "id": 89
+    },
+    {
+        "nombre": "Dolores dulce",
+        "stock": 2500,
+        "precio": 2200,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/DoloresDulce.jpg",
+        "id": 90
+    },
+    {
+        "nombre": "Federico de alvear brut",
+        "stock": 2500,
+        "precio": 500,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/FedericoAlvearBrut.jpg",
+        "id": 91
+    },
+    {
+        "nombre": "Federico de alvear dulce",
+        "stock": 2500,
+        "precio": 250,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/FedericoAlvearDulce.jpg",
+        "id": 92
+    },
+    {
+        "nombre": "Mercier brut",
+        "stock": 3000,
+        "precio": 3000,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/MercierBrut.jpg",
+        "id": 93
+    },
+    {
+        "nombre": "Mercier rose",
+        "stock": 3000,
+        "precio": 3500,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/MercierRose.jpg",
+        "id": 94
+    },
+    {
+        "nombre": "Mumm brut",
+        "stock": 2500,
+        "precio": 1800,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/MummBrut.jpg",
+        "id": 95
+    },
+    {
+        "nombre": "Navarro correa nature",
+        "stock": 3000,
+        "precio": 2200,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/NavarroCorreaBrut.jpg",
+        "id": 96
+    },
+    {
+        "nombre": "Navarro correa brut",
+        "stock": 3000,
+        "precio": 1800,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/NavarroCorreaNature.jpg",
+        "id": 97
+    },
+    {
+        "nombre": "Nieto senetiner brut",
+        "stock": 2500,
+        "precio": 1500,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/NietoSenetinerBrut.jpg",
+        "id": 98
+    },
+    {
+        "nombre": "Novecento brut",
+        "stock": 2500,
+        "precio": 1200,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/NovecentoBrut.jpg",
+        "id": 99
+    },
+    {
+        "nombre": "Novecento dulce",
+        "stock": 2500,
+        "precio": 900,
+        "descuento": 0,
+        "categoria": "Champagnes",
+        "imagen": "./assets/img/productos/Champagne/NovecentoDulce.jpg",
+        "id": 100
+    },
+    {
+        "nombre": "Pack #1",
+        "stock": 1500,
+        "precio": 5000,
+        "descuento": 0,
+        "categoria": "Combos",
+        "imagen": "./assets/img/productos/Pack/PackCocaSprite.jpg",
+        "id": 101
+    },
+    {
+        "nombre": "Pack #2",
+        "stock": 2000,
+        "precio": 4000,
+        "descuento": 0,
+        "categoria": "Combos",
+        "imagen": "./assets/img/productos/Pack/Pasos.jpg",
+        "id": 102
+    },
+    {
+        "nombre": "Pack #3",
+        "stock": 1600,
+        "precio": 3200,
+        "descuento": 0,
+        "categoria": "Combos",
+        "imagen": "./assets/img/productos/Pack/PepsiPapas.jpg",
+        "id": 103
+    },
+    {
+        "nombre": "Pack #4",
+        "stock": 2000,
+        "precio": 1500,
+        "descuento": 0,
+        "categoria": "Combos",
+        "imagen": "./assets/img/productos/Pack/SpritePapasMani.jpg",
+        "id": 104
+    },
+    {
+        "nombre": "Pack #5",
+        "stock": 1500,
+        "precio": 600,
+        "descuento": 0,
+        "categoria": "Combos",
+        "imagen": "./assets/img/productos/Pack/hielo.jpg",
+        "id": 105
+    },
+    {
+        "nombre": "Alaris blanco",
+        "stock": 2000,
+        "precio": 150,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/AlarisBlanco.jpg",
+        "id": 106
+    },
+    {
+        "nombre": "Alaris tinto",
+        "stock": 2000,
+        "precio": 120,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/AlarisTinto.jpg",
+        "id": 107
+    },
+    {
+        "nombre": "Canciller blanco",
+        "stock": 2000,
+        "precio": 180,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/CancillerBlanco.jpg",
+        "id": 108
+    },
+    {
+        "nombre": "Canciller cabernet",
+        "stock": 2000,
+        "precio": 200,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/CancillerCabernet.jpg",
+        "id": 109
+    },
+    {
+        "nombre": "Canciller tinto",
+        "stock": 2000,
+        "precio": 150,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/CancillerTinto.jpg",
+        "id": 110
+    },
+    {
+        "nombre": "Colon blanco",
+        "stock": 2000,
+        "precio": 220,
+        "descuento": 0.5,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/ColonBlanco.jpg",
+        "id": 111
+    },
+    {
+        "nombre": "Colon malbec",
+        "stock": 2000,
+        "precio": 150,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/ColonMalbec.jpg",
+        "id": 112
+    },
+    {
+        "nombre": "Colon tinto",
+        "stock": 2000,
+        "precio": 250,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/ColonTinto.jpg",
+        "id": 113
+    },
+    {
+        "nombre": "Estancia mendoza blanco dulce",
+        "stock": 2000,
+        "precio": 150,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/EstanciaMendozaBlancoDulce.jpg",
+        "id": 114
+    },
+    {
+        "nombre": "Estancia mendoza tinto cabernet",
+        "stock": 2000,
+        "precio": 180,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/EstanciaMendozaTintoCabernet.jpg",
+        "id": 115
+    },
+    {
+        "nombre": "Estancia mendoza tinto malbec",
+        "stock": 2000,
+        "precio": 200,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/EstanciaMendozaTintoMalbec.jpg",
+        "id": 116
+    },
+    {
+        "nombre": "Suter cabernet",
+        "stock": 2000,
+        "precio": 260,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/SuterCabernet.jpg",
+        "id": 117
+    },
+    {
+        "nombre": "Suter malbec",
+        "stock": 2000,
+        "precio": 250,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/SuterMalbec.jpg",
+        "id": 118
+    },
+    {
+        "nombre": "Suter merlot",
+        "stock": 2000,
+        "precio": 280,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/SuterMerlot.jpg",
+        "id": 119
+    },
+    {
+        "nombre": "Suter tinto",
+        "stock": 2000,
+        "precio": 240,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/SuterTinto.jpg",
+        "id": 120
+    },
+    {
+        "nombre": "Termidor tinto",
+        "stock": 2000,
+        "precio": 90,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/TermidorTinto.jpg",
+        "id": 121
+    },
+    {
+        "nombre": "Toro blanco",
+        "stock": 2000,
+        "precio": 110,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/ToroBlanco.jpg",
+        "id": 122
+    },
+    {
+        "nombre": "Toro tinto",
+        "stock": 2000,
+        "precio": 120,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/ToroTinto.jpg",
+        "id": 123
+    },
+    {
+        "nombre": "Viña de balbo blanco",
+        "stock": 2000,
+        "precio": 130,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/ViniadeBalboBlanco.jpg",
+        "id": 124
+    },
+    {
+        "nombre": "Viña de balbo tinto",
+        "stock": 2000,
+        "precio": 120,
+        "descuento": 0,
+        "categoria": "Vinos",
+        "imagen": "./assets/img/productos/Vinos/ViniadeBlaboTinto.jpg",
+        "id": 125
+    }
+]

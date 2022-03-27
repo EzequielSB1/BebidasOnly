@@ -289,6 +289,56 @@ header .navBar {
       .acceso .visorCompra div button:hover {
         cursor: pointer;
         background-color: #D5D5D4; }
+  .acceso .finalizarCompraPantalla {
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+    display: none; }
+    .acceso .finalizarCompraPantalla .visorFinalizar {
+      width: 80%;
+      height: 80%;
+      margin: 50px auto;
+      background-color: #ccc;
+      border-radius: 30px;
+      padding: 20px; }
+      .acceso .finalizarCompraPantalla .visorFinalizar h6 {
+        text-align: center;
+        font-size: 2em; }
+      .acceso .finalizarCompraPantalla .visorFinalizar .visorFinalizarInt {
+        width: 100%;
+        height: 50%;
+        margin-top: 10px;
+        background-color: #000; }
+      .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos {
+        display: flex;
+        justify-content: space-evenly; }
+        .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos #calle, .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos #zona, .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos #enviarDatos {
+          width: 30%;
+          height: 30px;
+          margin-top: 10px;
+          text-align: center; }
+        .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos #enviarDatos:hover {
+          cursor: pointer; }
+      .acceso .finalizarCompraPantalla .visorFinalizar #dataTime {
+        width: 80%;
+        font-size: 1.2em;
+        margin: 30px auto;
+        text-align: center; }
+      .acceso .finalizarCompraPantalla .visorFinalizar .timeLine {
+        width: 100%;
+        height: 100%;
+        margin: 10px auto;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between; }
+        .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .representacion {
+          width: 10%;
+          height: 15%;
+          border-radius: 50px;
+          background-color: red; }
 
 footer {
   width: 100%;

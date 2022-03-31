@@ -22,7 +22,7 @@
                 <h2>Bebidas Only</h2>
             </a>
             <div class="menu menuVer">
-                <button class="botonMenu"><img src="./assets/img/menu.svg" alt="menu-hamburguesa"></button>
+                <div class="botonMenu"><img src="./assets/img/menu.svg" alt="menu-hamburguesa"></div>
                 <nav class="nav">
                     <ul>
                         <li><a href="./inicio.html">Inicio</a></li>
@@ -44,7 +44,7 @@
                             <h5>Precio final:</h5>
                             <h5 id="precioFinal"></h5>
                         </div>
-                        <button><a href="finalizarCompra.html"> Finalizar compra</a></button>
+                        <button class="botonFinalizarCompra">Finalizar compra</button>
                         <button id="botonVaciar">Limpiar carrito</button>
                     </div>
                 </div>
@@ -88,37 +88,34 @@
         </section>
         <section class="visorCompra">
         </section>
-        <section class="finalizarCompraPantalla">
+        <section class="finalizarCompraPantalla ">
             <div class="visorFinalizar">
+                <button class="botonSalir">X</button>
                 <h6>Finalizar su compra</h6>
                 <div class="visorFinalizarInt">
-
                 </div>
                 <div class="ingresarDatos">
                     <input id="calle" type="text" placeholder="Ingrese su direccion">
                     <select id="zona">
+                        <option value="" selected disabled>Elija su zona</option>
                         <option value="CABA">Ciudad Autonoma de Buenos Aires</option>
-                        <option value="BuenasAires">Buenos Aires</option>
+                        <option value="BuenosAires">Buenos Aires</option>
                     </select>
-                    <input type="submit" value="Enviar" id="enviarDatos">
                 </div>
                 <div id="dataTime">
-                    <p>Su producto llegara en los proximos 30 minutos</p>
                 </div>
                 <div class="timeLine">
                     <div class="representacion">
                         <div class="edificio">
-
+                            <img src="./assets/img/carrito.svg" alt="">
                         </div>
                     </div>
-                    <div class="representacion">
-                        <div class="moto">
-
-                        </div>
+                    <div class="carga">
+                        <div id="barra" class="inicio animacion15"></div>
                     </div>
                     <div class="representacion">
                         <div class="casa">
-
+                            <img src="./assets/img/casa.svg" alt="">
                         </div>
                     </div>
                 </div>

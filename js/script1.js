@@ -1,3 +1,52 @@
+//menu responsive
+let botonMenu = document.querySelector('.botonMenu');
+let verMenu = document.querySelector('.nav')
+botonMenu.addEventListener('click', () => verMenu.classList.toggle('menuVer'));
+
+// barra de carga 
+let dataTime = document.querySelector('#dataTime');
+let barraDeCarga = document.querySelector('#barra');
+let calle = document.getElementById('calle');
+document.getElementById("zona").addEventListener("change", () => {
+    let x = document.getElementById("zona");
+    switch (x.value) {
+        case 'CABA':
+            envio15min();
+            break;
+        case 'BuenosAires':
+            envio30min();
+            break;
+        
+        default:
+            break;
+    }
+});
+
+
+function envio15min() {
+    let texto = document.createElement("p");
+    texto.textContent = '';
+    texto.textContent = 'Su producto llegara en los proximos 15 minutos';
+    dataTime.append(texto);
+    barraDeCarga.classList.add('final');
+    barraDeCarga.classList.add('animacion15');
+    barraDeCarga.classList.remove('animacion30');
+}
+
+function envio30min() {
+    let texto = document.createElement("p");
+    texto.textContent = '';
+    texto.textContent = 'Su producto llegara en los proximos 30 minutos';
+    dataTime.append(texto);
+    barraDeCarga.classList.add('final');
+    barraDeCarga.classList.add('animacion30');
+    barraDeCarga.classList.remove('animacion15');
+
+}
+
+
+
+
 // declaracion de otras variables (principales)
 
 const visor = document.querySelector('.visorProductos')
@@ -63,7 +112,7 @@ function renderTarjetasProductos(arrayProductos) {
         // boton
         const botonTarjeta = document.createElement('button');
         botonTarjeta.classList.add('botonAgregarAlCarrito');
-        botonTarjeta.textContent = 'Agregar producto';
+        botonTarjeta.textContent = '+';
         botonTarjeta.setAttribute('marcador', Producto.id);
         botonTarjeta.addEventListener('click', agregarProducto);
         
@@ -131,15 +180,25 @@ let botonCarrito = document.querySelector('.botonCarrito');
 let verCarrito = document.querySelector('.carrito1')
 botonCarrito.addEventListener('click', () => verCarrito.classList.toggle('visor'));
 
+// finalizar compra
+let botonFinalizarCompra = document.querySelector('.botonFinalizarCompra');
+let visorFinaliarCompra = document.querySelector('.finalizarCompraPantalla')
+botonFinalizarCompra.addEventListener('click', () => visorFinaliarCompra.classList.toggle('mostrar'));
+let botonSalir = document.querySelector('.botonSalir')
+botonSalir.addEventListener('click', () => visorFinaliarCompra.classList.remove('mostrar'));
+
 // carrito
 let botonTarjeta = document.querySelector('.botonAgregarAlCarrito')
 let visorCarrito = document.querySelector('.visorProductos');
+let visorCompraFinalizada = document.querySelector('.visorFinalizarInt');
 
 function agregarProducto(e) {
     // Anyadimos el Nodo a nuestro carrito
     carrito.push(e.target.getAttribute('marcador'))
     // Actualizamos el carrito 
     renderizarCarrito();
+    // Actualizamos el Final
+    renderizarCompraTotal();
     // Actualizamos el LocalStorage
     guardarCarritoEnLocalStorage();
     // alerta de producto agregado
@@ -193,6 +252,43 @@ function renderizarCarrito() {
 }
 
 
+function renderizarCompraTotal() {
+    // Vaciamos todo el html
+    visorCompraFinalizada.textContent = '';
+    // Quitamos los duplicados
+    console.log(carrito)
+    const carritoSinDuplicados = [...new Set(carrito)];
+    console.log(carritoSinDuplicados)
+    // Generamos los Nodos a partir de carrito
+    carritoSinDuplicados.forEach((item) => {
+        // Obtenemos el item que necesitamos de la variable base de datos
+        const miItem = productos1.filter((itemBaseDatos) => {
+            // ¿Coincide las id? Solo puede existir un caso
+            return itemBaseDatos.id === parseInt(item);
+        });
+        // Cuenta el número de veces que se repite el producto
+        const numeroUnidadesItem = carrito.reduce((total, itemId) => {
+            // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
+            return itemId === item ? total += 1 : total;
+        }, 0);
+        // Creamos el nodo del item del carrito
+        const miNodo2 = document.createElement('li');
+        miNodo2.innerHTML = `<img src="${miItem[0].imagen}"> <h6>${miItem[0].nombre}</h6> <h5>${numeroUnidadesItem} X ${miItem[0].precio}</h5>`;
+        // Boton de borrar
+        const miBoton = document.createElement('button');
+        miBoton.dataset.item = item;
+        miBoton.addEventListener('click', borrarItemCarrito);
+        miBoton.textContent = 'X'
+        // Mezclamos nodos
+        miNodo2.appendChild(miBoton);
+        visorCompraFinalizada.appendChild(miNodo2);
+        // muestra de producto agregado
+    
+    });
+    // Renderizamos el precio total en el HTML
+    precioTotal.textContent = calcularTotal();
+}
+
 /**
 * Evento para borrar un elemento del carrito
 */
@@ -205,6 +301,7 @@ function borrarItemCarrito(e) {
     });
     // volvemos a renderizar
     renderizarCarrito();
+    renderizarCompraTotal();
     // Actualizamos el LocalStorage
     guardarCarritoEnLocalStorage();
 
@@ -257,12 +354,4 @@ DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 cargarCarritoDeLocalStorage();
 document.addEventListener('DOMContentLoaded', muestraProductosTodo);
 renderizarCarrito();
-
-
-//menu responsive
-let botonMenu = document.querySelector('.botonMenu');
-let verMenu = document.querySelector('.nav')
-botonMenu.addEventListener('click', () => verMenu.classList.toggle('menuVer'));
-
-
-
+renderizarCompraTotal();

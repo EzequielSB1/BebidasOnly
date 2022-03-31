@@ -9,6 +9,13 @@ body {
   background-color: #EEEEEE;
   font-family: 'Poppins', sans-serif; }
 
+body::-webkit-scrollbar {
+  width: 7px; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 50px; }
+
 .entry {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -79,13 +86,13 @@ header .navBar {
     header .navBar .logo h2 {
       font-size: x-large;
       align-items: flex-start; }
-  header .navBar .menu button {
+  header .navBar .menu div {
     display: none; }
-    header .navBar .menu button img {
+    header .navBar .menu div img {
       width: 25px;
       height: 25px;
       background-color: #DFDFDE; }
-    header .navBar .menu button img:hover {
+    header .navBar .menu div img:hover {
       cursor: pointer;
       background-color: #D5D5D4; }
   header .navBar .menu .nav {
@@ -201,9 +208,6 @@ header .navBar {
         border-radius: 30px;
         background-color: #E9E9E9;
         transition: 500ms; }
-        header .navBar .carritoDiv .carrito1 .compraFinalizada button a {
-          text-decoration: none;
-          color: #000; }
       header .navBar .carritoDiv .carrito1 .compraFinalizada button:hover {
         cursor: pointer;
         background-color: #ccc; }
@@ -285,7 +289,8 @@ header .navBar {
         margin-top: 10px;
         background-color: #DFDFDE;
         border: 1px solid #E5E5E5;
-        transition: 500ms; }
+        transition: 500ms;
+        align-items: center; }
       .acceso .visorCompra div button:hover {
         cursor: pointer;
         background-color: #D5D5D4; }
@@ -304,41 +309,117 @@ header .navBar {
       background-color: #ccc;
       border-radius: 30px;
       padding: 20px; }
+      .acceso .finalizarCompraPantalla .visorFinalizar .botonSalir {
+        width: 20px;
+        height: 20px;
+        margin-left: 95%;
+        background-color: red;
+        border: none; }
+        .acceso .finalizarCompraPantalla .visorFinalizar .botonSalir:hover {
+          cursor: pointer; }
       .acceso .finalizarCompraPantalla .visorFinalizar h6 {
+        margin-top: auto;
         text-align: center;
         font-size: 2em; }
       .acceso .finalizarCompraPantalla .visorFinalizar .visorFinalizarInt {
         width: 100%;
         height: 50%;
         margin-top: 10px;
-        background-color: #000; }
+        background-color: #DFDFDE;
+        overflow-y: scroll; }
+        .acceso .finalizarCompraPantalla .visorFinalizar .visorFinalizarInt li {
+          width: 95%;
+          margin-top: 20px;
+          display: grid;
+          grid-template-columns: 1fr 3fr 1fr;
+          grid-template-rows: .7fr .5fr;
+          grid-template-areas: "img title cant" "img cont cant"; }
+          .acceso .finalizarCompraPantalla .visorFinalizar .visorFinalizarInt li img {
+            width: 75px;
+            height: 75px;
+            grid-area: img;
+            margin: auto; }
+          .acceso .finalizarCompraPantalla .visorFinalizar .visorFinalizarInt li h6 {
+            grid-area: title;
+            font-size: 1.2rem;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center; }
+          .acceso .finalizarCompraPantalla .visorFinalizar .visorFinalizarInt li h5 {
+            grid-area: cont;
+            font-size: 1rem;
+            text-align: center; }
+          .acceso .finalizarCompraPantalla .visorFinalizar .visorFinalizarInt li button {
+            width: 30px;
+            height: 30px;
+            margin-top: 7px;
+            margin-left: 15px;
+            border: 0;
+            background-color: #000;
+            color: #fff;
+            grid-area: cant; }
+          .acceso .finalizarCompraPantalla .visorFinalizar .visorFinalizarInt li button:hover {
+            cursor: pointer; }
       .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos {
         display: flex;
+        flex-direction: row;
         justify-content: space-evenly; }
-        .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos #calle, .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos #zona, .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos #enviarDatos {
-          width: 30%;
-          height: 30px;
+        .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos #calle, .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos #zona {
+          width: 45%;
+          height: 30%;
           margin-top: 10px;
+          padding: 5px;
           text-align: center; }
-        .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos #enviarDatos:hover {
-          cursor: pointer; }
       .acceso .finalizarCompraPantalla .visorFinalizar #dataTime {
         width: 80%;
         font-size: 1.2em;
         margin: 30px auto;
         text-align: center; }
       .acceso .finalizarCompraPantalla .visorFinalizar .timeLine {
-        width: 100%;
+        width: 95%;
         height: 100%;
         margin: 10px auto;
         padding: 20px;
-        display: flex;
-        justify-content: space-between; }
+        display: flex; }
         .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .representacion {
-          width: 10%;
-          height: 15%;
+          width: 100px;
+          height: 100px;
+          padding: 5px;
           border-radius: 50px;
           background-color: red; }
+          .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .representacion .edificio, .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .representacion .casa {
+            width: 95%;
+            height: 95%;
+            margin: auto;
+            margin-top: 1.5px;
+            border-radius: 50px;
+            background-color: #fff;
+            display: flex;
+            align-content: center; }
+            .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .representacion .edificio img, .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .representacion .casa img {
+              width: 75%;
+              height: 75%;
+              margin: auto; }
+        .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .carga {
+          width: 80%;
+          height: 30px;
+          margin-top: 33px; }
+          .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .carga .inicio {
+            width: 0;
+            height: 100%;
+            background-color: red; }
+          .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .carga .final {
+            width: 100%;
+            background-color: red;
+            height: 100%; }
+          .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .carga .animacion15 {
+            transition: all 15s ease .5s; }
+          .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .carga .animacion30 {
+            transition: all 30s ease .5s; }
+  .acceso .mostrar {
+    display: block; }
+  .acceso .noMostrar {
+    display: none; }
 
 footer {
   width: 100%;
@@ -346,6 +427,7 @@ footer {
   background-color: #DFDFDE;
   padding-top: 35px; }
   footer h3 {
+    font-size: 1.5rem;
     text-align: center; }
 
 .nosotros {
@@ -427,7 +509,9 @@ footer {
 
 @media only screen and (max-width: 1300px) {
   header .navBar .carritoDiv .carrito1 {
-    margin-left: -22%; } }
+    margin-left: -22%; }
+  .acceso .finalizarCompraPantalla {
+    height: 140%; } }
 
 @media only screen and (max-width: 1200px) {
   header .navBar .carritoDiv .carrito1 {
@@ -435,7 +519,11 @@ footer {
 
 @media only screen and (max-width: 1000px) {
   header .navBar .carritoDiv .carrito1 {
-    margin-left: -28%; } }
+    margin-left: -28%; }
+  .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .representacion {
+    height: 90px; }
+  .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .carga {
+    height: 25px; } }
 
 @media only screen and (max-width: 850px) {
   .contacto .contenedor {
@@ -470,11 +558,19 @@ footer {
     .entry .bgImg {
       display: none; }
   header .navBar .carritoDiv .carrito1 {
-    margin-left: -35%; } }
+    margin-left: -35%; }
+  .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .representacion {
+    height: 82px; }
+  .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .carga {
+    height: 20px; } }
 
 @media only screen and (max-width: 700px) {
   header .navBar .carritoDiv .carrito1 {
-    margin-left: -40%; } }
+    margin-left: -40%; }
+  .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .representacion {
+    height: 75px; }
+  .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .carga {
+    height: 15px; } }
 
 @media only screen and (max-width: 550px) {
   header {
@@ -494,10 +590,10 @@ footer {
         border: none;
         background-color: #DFDFDE;
         margin: 20px auto 0; }
-        header .navBar .menu button {
+        header .navBar .menu div {
           display: flex;
           border: none; }
-          header .navBar .menu button img {
+          header .navBar .menu div img {
             color: #DFDFDE; }
         header .navBar .menu button:hover {
           cursor: pointer; }
@@ -520,8 +616,42 @@ footer {
       header .navBar .carritoDiv .botonCarrito {
         margin: 0 80px 10px 0; }
       header .navBar .carritoDiv .carrito1 {
-        margin-left: -55%; } }
+        margin-left: -55%; }
+  .acceso .visorCompra div {
+    width: 350px;
+    height: 130px;
+    margin: 15px;
+    padding: 20px 10px;
+    display: flex; }
+    .acceso .visorCompra div img {
+      width: 90%;
+      height: 90%; }
+    .acceso .visorCompra div h5 {
+      margin-top: 25px; }
+    .acceso .visorCompra div h6 {
+      margin-top: 20px; }
+    .acceso .visorCompra div button {
+      width: 90%;
+      height: 80%;
+      margin-top: 5px; }
+  .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos {
+    flex-direction: column; }
+    .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos #calle, .acceso .finalizarCompraPantalla .visorFinalizar .ingresarDatos #zona {
+      width: 90%;
+      margin: 5px auto; }
+  .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .representacion {
+    height: 65px; }
+  .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .carga {
+    height: 15px;
+    margin-top: 25px; }
+  footer h3 {
+    font-size: 1rem; } }
 
 @media only screen and (max-width: 400px) {
   header .navBar .carritoDiv .carrito1 {
-    margin-left: -62%; } }
+    margin-left: -62%; }
+  .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .representacion {
+    height: 50px; }
+  .acceso .finalizarCompraPantalla .visorFinalizar .timeLine .carga {
+    height: 10px;
+    margin-top: 20px; } }

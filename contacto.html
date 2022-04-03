@@ -52,25 +52,40 @@
     </header>
     <main class="contacto">
         <div class="contenedor">
-            <form action="">
-                <textarea name="Mensaje" placeholder="Escribe tu mensaje aqui..." class="mensaje"></textarea>
+            <form action="" id="form">
+                <textarea name="mensaje" placeholder="Escribe tu mensaje aqui..." class="mensaje" required></textarea>
                 <div class="formulario">
                     <div class="formularioLlenar">
-                        <input type="text" name="nombre" placeholder="Nombre" class="input nombre">
+                        <input type="text" name="nombre" placeholder="Nombre" class="input nombre" required>
                         <input type="text" name="apellido" placeholder="Apellido" class="input apellido">
-                        <input type="email" name="email" placeholder="Email" class="input email">
+                        <input type="email" name="email" placeholder="Email" class="input email" required>
                         <input type="text" name="titulo" placeholder="Titulo" class="input">
                     </div>
                     <div class="enviar">
-                        <button>Enviar</button>
+                        <input type="submit" id="button" value="Enviar" >
                     </div>
                 </div>
             </form>
         </div>
     </main>
     <footer>
-        <h3>        @todoslosderechosreservadosparaBebidasOnly
+        <div>
+            <div><a href="https://www.instagram.com/" target="_blank"><img src="./assets/img/i-instagram-384.svg" alt="instagram">Instagram</a></div>
+            <div><a href="https://www.facebook.com/" target="_blank"><img src="./assets/img/i-facebook-480.svg" alt="facebook">Facebook</a></div>
+            <div><a href="https://www.twitter.com/" target="_blank"><img src="./assets/img/i-twitter-480.svg" alt="twitter">Twitter</a></div>
+            <div><a href="https://www.tiktok.com/" target="_blank"><img src="./assets/img/i-tik-tok-480.svg" alt="tiktok">Tiktok</a></div>
+        </div>
+        <h3>        
+            @todoslosderechosreservadosparaBebidasOnly
         </h3>
     </footer>
+    <!-- js -->
+    <script src="./js/script3.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    emailjs.init('E3wRRMMhARFHagyGM')
+    </script>
+    <script src="./js/script4.js"></script>
 </body>
 </html>

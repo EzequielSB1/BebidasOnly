@@ -1,8 +1,3 @@
-//menu responsive
-let botonMenu = document.querySelector('.botonMenu');
-let verMenu = document.querySelector('.nav')
-botonMenu.addEventListener('click', () => verMenu.classList.toggle('menuVer'));
-
 // barra de carga 
 let dataTime = document.querySelector('#dataTime');
 let barraDeCarga = document.querySelector('#barra');

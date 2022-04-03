@@ -86,6 +86,8 @@ header .navBar {
     header .navBar .logo h2 {
       font-size: x-large;
       align-items: flex-start; }
+      header .navBar .logo h2:hover {
+        cursor: pointer; }
   header .navBar .menu div {
     display: none; }
     header .navBar .menu div img {
